@@ -24,11 +24,15 @@ namespace Kino
         public int MovieId;
         public string Date;
         public string Time;
+        public string AMPM;
 
         public NewShow(OracleConnection conn)
         {
             InitializeComponent();
             this.conn = conn;
+            cbTime.Text = cbTime.Items[1].ToString() ;
+            string str = dtpDate.Value.ToString();
+            Date = str.Substring(0, 9);
         }
 
         private void tbMovie_TextChanged(object sender, EventArgs e)
@@ -49,10 +53,11 @@ namespace Kino
             {
                 int check = cmd.ExecuteNonQuery();
                 MessageBox.Show("Successfully inserted  show.");///////////OD IZBRISHI GI POSLE
-              //  tbDate.Clear();
-              //  tbMovie.Clear();
-              //  tbRoom.Clear();
-              //  tbTime.Clear();
+             
+                tbMovie.Clear();
+                tbRoom.Clear();
+                mtbTime.Clear();
+             
             }
             catch (OracleException ex)
             {
@@ -82,27 +87,42 @@ namespace Kino
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            string MovieName = tbMovie.Text;
-            da = new OracleDataAdapter();
-            Query = "SELECT MOVIEID FROM MOVIES WHERE MOVIENAME='" + MovieName + "'";
-            string MovieIdStr = selectCommand(Query);
-            MovieId = Convert.ToInt32(MovieIdStr);
-            string RoomNumstr = tbRoom.Text.Trim();
-        
-            try
+            if ((mtbTime.Text.Trim().Length != 0) && (tbRoom.Text.Trim().Length != 0) && (tbMovie.Text.Trim().Length != 0))
             {
-                Roomnumber = Convert.ToInt16(RoomNumstr);
+                string MovieName = tbMovie.Text;
+                da = new OracleDataAdapter();
+                Query = "SELECT MOVIEID FROM MOVIES WHERE MOVIENAME='" + MovieName + "'";
+                string MovieIdStr = selectCommand(Query);
+                MovieId = Convert.ToInt32(MovieIdStr);
+                string RoomNumstr = tbRoom.Text.Trim();
+
+                try
+                {
+                    Roomnumber = Convert.ToInt16(RoomNumstr);
+                }
+                catch (FormatException ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+
+                Time = Date;
+
+                string time = mtbTime.Text;
+                string Hours = time.Substring(0, 2);
+                string Minutes = time.Substring(3, 2);
+                Time += Hours + "." + Minutes + "." + "00.000000" + cbTime.Text;
+                Query = "INSERT INTO SHOWS VALUES(SHOWSEQUENCE.Nextval,'" + Date + "','" + Time + "'," + MovieId + "," + Roomnumber + ")";
+                insertInto(Query);
+               
+                this.Close();
             }
-            catch (FormatException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            Date = tbDate.Text;
-            Time = tbTime.Text;
-            Query="INSERT INTO SHOWS VALUES(SHOWSEQUENCE.Nextval,'"+Date +"','"+Time+"',"+MovieId+","+Roomnumber+")";
-            insertInto(Query);
-         //   conn.Close();//OD IZBRISHI GI POSLEEEEEEEEEEEEEEE
-         //   this.Close();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            string str = dtpDate.Value.ToString();
+            Date = str.Substring(0, 9);
+            
         }
     }
 }

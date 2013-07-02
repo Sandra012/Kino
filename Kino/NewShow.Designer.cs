@@ -34,9 +34,10 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.tbRoom = new System.Windows.Forms.TextBox();
-            this.tbDate = new System.Windows.Forms.TextBox();
-            this.tbTime = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.mtbTime = new System.Windows.Forms.MaskedTextBox();
+            this.cbTime = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // tbMovie
@@ -50,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(89, 50);
+            this.label1.Location = new System.Drawing.Point(142, 50);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 13);
             this.label1.TabIndex = 1;
@@ -59,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(89, 103);
+            this.label2.Location = new System.Drawing.Point(143, 103);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 2;
@@ -68,7 +69,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(89, 153);
+            this.label3.Location = new System.Drawing.Point(148, 217);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 3;
@@ -77,7 +78,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(89, 204);
+            this.label4.Location = new System.Drawing.Point(148, 159);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(33, 13);
             this.label4.TabIndex = 4;
@@ -91,23 +92,9 @@
             this.tbRoom.TabIndex = 5;
             this.tbRoom.TextChanged += new System.EventHandler(this.tbRoom_TextChanged);
             // 
-            // tbDate
-            // 
-            this.tbDate.Location = new System.Drawing.Point(116, 169);
-            this.tbDate.Name = "tbDate";
-            this.tbDate.Size = new System.Drawing.Size(100, 20);
-            this.tbDate.TabIndex = 6;
-            // 
-            // tbTime
-            // 
-            this.tbTime.Location = new System.Drawing.Point(116, 220);
-            this.tbTime.Name = "tbTime";
-            this.tbTime.Size = new System.Drawing.Size(100, 20);
-            this.tbTime.TabIndex = 7;
-            // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(116, 266);
+            this.btnAdd.Location = new System.Drawing.Point(116, 272);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 23);
             this.btnAdd.TabIndex = 8;
@@ -115,14 +102,42 @@
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(67, 233);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(200, 20);
+            this.dtpDate.TabIndex = 9;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // mtbTime
+            // 
+            this.mtbTime.Location = new System.Drawing.Point(116, 176);
+            this.mtbTime.Mask = "00:00";
+            this.mtbTime.Name = "mtbTime";
+            this.mtbTime.Size = new System.Drawing.Size(33, 20);
+            this.mtbTime.TabIndex = 10;
+            // 
+            // cbTime
+            // 
+            this.cbTime.FormattingEnabled = true;
+            this.cbTime.Items.AddRange(new object[] {
+            "AM",
+            "PM"});
+            this.cbTime.Location = new System.Drawing.Point(174, 175);
+            this.cbTime.Name = "cbTime";
+            this.cbTime.Size = new System.Drawing.Size(42, 21);
+            this.cbTime.TabIndex = 11;
+            // 
             // NewShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(341, 331);
+            this.Controls.Add(this.cbTime);
+            this.Controls.Add(this.mtbTime);
+            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.tbTime);
-            this.Controls.Add(this.tbDate);
             this.Controls.Add(this.tbRoom);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -144,8 +159,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox tbRoom;
-        private System.Windows.Forms.TextBox tbDate;
-        private System.Windows.Forms.TextBox tbTime;
         private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.MaskedTextBox mtbTime;
+        private System.Windows.Forms.ComboBox cbTime;
     }
 }
