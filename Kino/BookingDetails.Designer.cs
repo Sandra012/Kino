@@ -33,7 +33,9 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.lbSeats = new System.Windows.Forms.ListBox();
-            this.tbShow = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tbTotalPrice = new System.Windows.Forms.TextBox();
+            this.lblShow = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -47,16 +49,17 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(58, 250);
+            this.btnConfirm.Location = new System.Drawing.Point(58, 274);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 14;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(165, 250);
+            this.btnCancel.Location = new System.Drawing.Point(165, 274);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 15;
@@ -77,22 +80,44 @@
             this.lbSeats.FormattingEnabled = true;
             this.lbSeats.Location = new System.Drawing.Point(120, 93);
             this.lbSeats.Name = "lbSeats";
-            this.lbSeats.Size = new System.Drawing.Size(60, 69);
+            this.lbSeats.Size = new System.Drawing.Size(65, 69);
             this.lbSeats.TabIndex = 17;
             // 
-            // tbShow
+            // label3
             // 
-            this.tbShow.Location = new System.Drawing.Point(58, 203);
-            this.tbShow.Name = "tbShow";
-            this.tbShow.Size = new System.Drawing.Size(182, 20);
-            this.tbShow.TabIndex = 18;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(117, 241);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(60, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Total price:";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // tbTotalPrice
+            // 
+            this.tbTotalPrice.Location = new System.Drawing.Point(183, 238);
+            this.tbTotalPrice.Name = "tbTotalPrice";
+            this.tbTotalPrice.ReadOnly = true;
+            this.tbTotalPrice.Size = new System.Drawing.Size(57, 20);
+            this.tbTotalPrice.TabIndex = 20;
+            // 
+            // lblShow
+            // 
+            this.lblShow.AutoSize = true;
+            this.lblShow.Location = new System.Drawing.Point(64, 206);
+            this.lblShow.Name = "lblShow";
+            this.lblShow.Size = new System.Drawing.Size(199, 13);
+            this.lblShow.TabIndex = 21;
+            this.lblShow.Text = "Movie Name, Time, Date, Room Number";
             // 
             // BookingDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(314, 346);
-            this.Controls.Add(this.tbShow);
+            this.Controls.Add(this.lblShow);
+            this.Controls.Add(this.tbTotalPrice);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbSeats);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
@@ -100,6 +125,7 @@
             this.Controls.Add(this.label1);
             this.Name = "BookingDetails";
             this.Text = "Booking details";
+            this.Load += new System.EventHandler(this.BookingDetails_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,6 +138,8 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox lbSeats;
-        private System.Windows.Forms.TextBox tbShow;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox tbTotalPrice;
+        private System.Windows.Forms.Label lblShow;
     }
 }

@@ -32,13 +32,10 @@ namespace Kino
         private void selectCommand(string query) {
             try
             {
-                
                 da = new OracleDataAdapter();
                 da.SelectCommand = new OracleCommand(query, conn);
                 dt = new DataTable();
                 da.Fill(dt);
-                
-                
             }
             catch (OracleException ex) { MessageBox.Show(ex.Message); }
 
@@ -56,6 +53,11 @@ namespace Kino
                     dgwCustomers.Rows[i].DefaultCellStyle.BackColor = Color.Wheat;
                 }
             }
+        }
+
+        private void Customers_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

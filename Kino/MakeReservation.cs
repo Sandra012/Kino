@@ -10,7 +10,7 @@ using System.Data;
 using System.Windows.Forms;
 using System.Drawing;
 
-//// ова е од страната на корисникот!
+
 namespace Kino
 {
     public partial class MakeReservation : Form
@@ -19,11 +19,15 @@ namespace Kino
         DataTable dt;
         OracleDataAdapter da;
         NewReservationContent Content;
+        
         public int ShowId { get; set; }
         public int CustomerId { get; set; }
         public int RoomNumber { get; set; }
 
-        
+        public int Price { get; set; }
+
+        private int NumberSeats { get; set; } //kolku sedista saka da rezervira
+        private List<Button> Selected { get; set; } //rezervirani sedista
             
         public MakeReservation(int CustomerId, int ShowId, OracleConnection conn)
         {
@@ -31,58 +35,23 @@ namespace Kino
             this.conn = conn;
             this.CustomerId = CustomerId;
             this.ShowId = ShowId;
+            Content = new NewReservationContent(this, conn);
+            
+            NumberSeats = Convert.ToInt16(tbNumberSeats.Text);
+            Selected = new List<Button>();
 
-            //Content = new NewReservationContent(this, conn, this.lbAvailableSeats);
-
-         //   this.RoomNumber = RoomNumber;
-          //  Content = new NewReservationContent(this, conn, this.lbAvailableSeats);/////ОВА ФУНКЦИОНИРАШЕ ПОРАНО СО ЛИСТБОКС. НЕЈЌЕ ПОЈЌЕ :S
-
+            Price = 200; //za pocetok neka e 200, posle ke ja dogovorime
         }
 
         private void MakeReservation_Load(object sender, EventArgs e)
         {
-           // Content.FillAvailableSeats(this.lblTest);
-            
+            Content.FillAvailableSeats();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbTotalPrice_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tbNumberSeats_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void A1_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         private void btnContinue_Click(object sender, EventArgs e)
         {
-          da = new OracleDataAdapter();
+          /*da = new OracleDataAdapter();
           dt = new DataTable();
           int SeatNum;
           string Query = @"SELECT ROOMNUMBER,SEATNUMBER 
@@ -108,8 +77,149 @@ namespace Kino
           }
           catch (OracleException ex) { MessageBox.Show(ex.Message); }
           SeatNum = Convert.ToInt16(dt.Rows[0][0]);
-          label1.Text = SeatNum.ToString();
+          label1.Text = SeatNum.ToString();*/
 
+            BookingDetails BookingDetails1 = new BookingDetails(ShowId, CustomerId, Selected, Price, RoomNumber, conn);
+            BookingDetails1.Show();
+
+        }
+
+        public void ReserveSeat(object sender) {
+            Button seat = sender as Button;
+            if (Selected.Count < NumberSeats && seat.BackColor == Color.CornflowerBlue) //ako sedisteto e slobodno i ako korisnikot se uste gi nema izbereno site sedista
+            {
+                Selected.Add(seat);
+                seat.BackColor = Color.LightGreen;
+            }
+            else if (seat.BackColor == Color.LightGreen) { //ako veke go izbral i se predomislil
+                Selected.Remove(seat);
+                seat.BackColor = Color.CornflowerBlue;
+            }
+        }
+
+        private void A1_Click_1(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void tbNumberSeats_TextChanged(object sender, EventArgs e)
+        {
+            NumberSeats = Convert.ToInt16(tbNumberSeats.Text);
+        }
+
+        private void A2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void A3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void A4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void A5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void A6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void B1_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void B2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void B3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void B4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void B5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void B6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void C1_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void C2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void C3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void C4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void C5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void C6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void D1_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void D2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void D3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void D4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void D5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void D6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
         }
     }
 }

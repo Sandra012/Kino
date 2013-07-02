@@ -70,6 +70,7 @@
             this.Controls.Add(this.dgwCustomers);
             this.Name = "Customers";
             this.Text = "Customers";
+            this.Load += new System.EventHandler(this.Customers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgwCustomers)).EndInit();
             this.ResumeLayout(false);
 

@@ -153,12 +153,6 @@
     <Compile Include="RecommendMovie.Designer.cs">
       <DependentUpon>RecommendMovie.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reservation.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Reservation.Designer.cs">
-      <DependentUpon>Reservation.cs</DependentUpon>
-    </Compile>
     <Compile Include="SignUp.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -216,9 +210,6 @@
     </Compile>
     <EmbeddedResource Include="RecommendMovie.resx">
       <DependentUpon>RecommendMovie.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reservation.resx">
-      <DependentUpon>Reservation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SignUp.resx">
       <DependentUpon>SignUp.cs</DependentUpon>
