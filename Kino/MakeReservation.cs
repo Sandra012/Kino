@@ -221,5 +221,186 @@ namespace Kino
         {
             ReserveSeat(sender);
         }
+
+        private void E1_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void E2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void E3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void E4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);   
+        }
+
+        private void E5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void E6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void F1_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void F2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);    
+        }
+
+        private void F3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);    
+        }
+
+        private void F4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);    
+        }
+
+        private void F5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void F6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void G1_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void G2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void G3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void G4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void G5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void G6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void H1_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void H2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);    
+        }
+
+        private void H3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void H4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void H5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void H6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void I1_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void I2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void I3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void I4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void I5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void I6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void J1_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void J2_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void J3_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void J4_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+
+        private void J5_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);    
+        }
+
+        private void J6_Click(object sender, EventArgs e)
+        {
+            ReserveSeat(sender);
+        }
+        
     }
 }
