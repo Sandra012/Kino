@@ -39,7 +39,7 @@ namespace Kino
                     da.Fill(dt);
                 }
                 catch (InvalidOperationException ex) { MessageBox.Show(ex.Message); }
-
+                dgvBookings.DataSource = dt;
             //    for (int i = 0; i < dt.Rows.Count; i++) {
                //     Booking b = new Booking(dt.Rows[i][0].ToString(), dt.Rows[i][1].ToString(), dt.Rows[i][2].ToString(), dt.Rows[i][3].ToString(), dt.Rows[i][4].ToString(), dt.Rows[i][5].ToString(), dt.Rows[i][6].ToString());
                  //   MessageBox.Show(b.ToString());
@@ -48,6 +48,46 @@ namespace Kino
                 
                
 
+            }
+
+        }
+
+        private void dgvBookings_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            for (int i = 0; i < dgvBookings.Rows.Count; i++) {
+                if (i % 2 == 0)
+                {
+                    dgvBookings.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(192, 255, 192);
+
+                }
+                else {
+                    dgvBookings.Rows[i].DefaultCellStyle.BackColor = Color.MintCream;
+                }
+            }
+            dgvBookings.BackgroundColor = Color.White;
+        }
+
+        private void Bookings_Enter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void Bookings_KeyPress(object sender, KeyPressEventArgs e)
+        {
+          
+
+        }
+
+        private void mtbTo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                btnFind_Click(sender, e);
             }
 
         }
