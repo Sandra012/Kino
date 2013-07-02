@@ -39,7 +39,8 @@ namespace Kino
             da.SelectCommand = new OracleCommand(QueryAllCustomers, conn);
             dt.Clear(); da.Fill(dt);
             foreach (DataRow dr in dt.Rows) {
-                if (dr[1].ToString() == this.Username && dr[2].ToString() == this.Password) {
+                int cmp = String.Compare(dr[1].ToString(), this.Username, true);
+                if (cmp == 0 && dr[2].ToString() == this.Password) {
                     return Convert.ToInt16(dr[0]);
                 }
             }
