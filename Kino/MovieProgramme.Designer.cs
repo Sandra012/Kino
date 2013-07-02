@@ -49,6 +49,7 @@
             this.panel1.Size = new System.Drawing.Size(609, 571);
             this.panel1.TabIndex = 1;
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
+            this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // label1
             // 

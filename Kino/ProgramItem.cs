@@ -85,7 +85,11 @@ namespace Kino
 
             this.lblMovieName.Click += new System.EventHandler(this.lblMovieName_Click);
             this.lblMovieName.MouseEnter += new System.EventHandler(this.lblMovieName_MouseEnter);
+            this.lblMovieName.MouseLeave += new System.EventHandler(this.lblMovieName_MouseLeave);
             this.btnBookNow.Click += new System.EventHandler(this.btnBookNow_Click);
+            this.btnBookNow.MouseEnter += new System.EventHandler(this.btnBookNow_Enter);
+            this.btnBookNow.MouseLeave += new System.EventHandler(this.btnBookNow_Leave);
+
         }
 
 
@@ -100,6 +104,11 @@ namespace Kino
             panel.Cursor = Cursors.Hand;
         }
 
+        private void lblMovieName_MouseLeave(object sender, EventArgs e)
+        {
+            panel.Cursor = Cursors.Arrow;
+        }
+
         private void btnBookNow_Click(object sender, EventArgs e)
         {
             if (CustomerId >= 0)
@@ -112,6 +121,15 @@ namespace Kino
                 LogIn LogInForm = new LogIn(conn, ShowId);
                 LogInForm.Show();
             }
+        }
+
+        private void btnBookNow_Enter(object sender, EventArgs e) {
+            panel.Cursor = Cursors.Hand;
+        }
+
+        private void btnBookNow_Leave(object sender, EventArgs e)
+        {
+            panel.Cursor = Cursors.Arrow;
         }
     }
 }

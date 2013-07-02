@@ -47,5 +47,11 @@ namespace Kino
         {
             this.Cursor = Cursors.Arrow;
         }
+
+        private void panel1_MouseHover(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+
+        }
     }
 }
