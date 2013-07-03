@@ -33,13 +33,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.tbPass = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(103, 180);
+            this.button1.Location = new System.Drawing.Point(31, 214);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(101, 23);
             this.button1.TabIndex = 0;
             this.button1.Text = "OK";
             this.button1.UseVisualStyleBackColor = true;
@@ -48,7 +51,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 61);
+            this.label1.Location = new System.Drawing.Point(28, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 13);
             this.label1.TabIndex = 1;
@@ -57,7 +60,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 109);
+            this.label2.Location = new System.Drawing.Point(28, 174);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 13);
             this.label2.TabIndex = 2;
@@ -65,18 +68,39 @@
             // 
             // tbUsername
             // 
-            this.tbUsername.Location = new System.Drawing.Point(138, 58);
+            this.tbUsername.Location = new System.Drawing.Point(92, 137);
             this.tbUsername.Name = "tbUsername";
-            this.tbUsername.Size = new System.Drawing.Size(86, 20);
+            this.tbUsername.Size = new System.Drawing.Size(147, 20);
             this.tbUsername.TabIndex = 3;
             // 
             // tbPass
             // 
-            this.tbPass.Location = new System.Drawing.Point(138, 102);
+            this.tbPass.Location = new System.Drawing.Point(90, 171);
             this.tbPass.Name = "tbPass";
             this.tbPass.PasswordChar = '*';
-            this.tbPass.Size = new System.Drawing.Size(86, 20);
+            this.tbPass.Size = new System.Drawing.Size(149, 20);
             this.tbPass.TabIndex = 4;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(138, 214);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Cancel";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::Kino.Properties.Resources.movieClapper1;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.InitialImage = global::Kino.Properties.Resources.movieClapper1;
+            this.pictureBox1.Location = new System.Drawing.Point(62, 21);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(148, 96);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // LogIn
             // 
@@ -84,6 +108,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.tbPass);
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.label2);
@@ -92,6 +118,7 @@
             this.Name = "LogIn";
             this.Text = "Log in";
             this.Load += new System.EventHandler(this.LogIn_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -104,5 +131,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.TextBox tbPass;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

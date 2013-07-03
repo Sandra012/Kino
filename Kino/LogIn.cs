@@ -49,5 +49,10 @@ namespace Kino
         {
             //formata e gotova
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

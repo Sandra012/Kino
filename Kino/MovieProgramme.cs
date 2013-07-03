@@ -71,15 +71,36 @@ namespace Kino
                 lblLoggedIn.Text += CustomerName;
             }
             else {
-                lblLoggedIn.Text = "Not logged in.";
-                btnLogInOut.Visible = false;
+                lblLoggedIn.Visible = false;
+                lblLogout.Visible = false;
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void lblLoggedIn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLogout_Click(object sender, EventArgs e)
         {
             CustomerId = -1;
             SetLoginLabel();
+        }
+
+        private void lblLogout_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+            
+        }
+
+        private void lblLogout_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
         }
     }
 }

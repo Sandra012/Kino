@@ -160,6 +160,16 @@ ORDER BY C.CUSTOMERID";
 
         }
 
+        private void pictureBox3_MouseEnter(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Hand;
+        }
+
+        private void pictureBox3_MouseLeave(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.Arrow;
+        }
+
 
     }
 }

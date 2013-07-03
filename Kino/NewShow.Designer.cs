@@ -38,6 +38,7 @@
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.mtbTime = new System.Windows.Forms.MaskedTextBox();
             this.cbTime = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tbMovie
@@ -52,7 +53,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(146, 56);
+            this.label1.Location = new System.Drawing.Point(146, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 15);
             this.label1.TabIndex = 1;
@@ -62,7 +63,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(147, 109);
+            this.label2.Location = new System.Drawing.Point(147, 106);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(49, 15);
             this.label2.TabIndex = 2;
@@ -72,7 +73,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(152, 223);
+            this.label3.Location = new System.Drawing.Point(152, 219);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(41, 15);
             this.label3.TabIndex = 3;
@@ -82,7 +83,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(152, 165);
+            this.label4.Location = new System.Drawing.Point(152, 162);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 15);
             this.label4.TabIndex = 4;
@@ -101,7 +102,7 @@
             this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnAdd.Location = new System.Drawing.Point(120, 278);
+            this.btnAdd.Location = new System.Drawing.Point(71, 279);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(100, 30);
             this.btnAdd.TabIndex = 8;
@@ -136,12 +137,26 @@
             this.cbTime.Size = new System.Drawing.Size(42, 21);
             this.cbTime.TabIndex = 11;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.button1.Location = new System.Drawing.Point(177, 279);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 30);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Cancel";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // NewShow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kino.Properties.Resources.newShowBackground;
             this.ClientSize = new System.Drawing.Size(352, 367);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cbTime);
             this.Controls.Add(this.mtbTime);
             this.Controls.Add(this.dtpDate);
@@ -171,5 +186,6 @@
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.MaskedTextBox mtbTime;
         private System.Windows.Forms.ComboBox cbTime;
+        private System.Windows.Forms.Button button1;
     }
 }

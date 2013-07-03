@@ -34,7 +34,8 @@
             this.tbMovieName = new System.Windows.Forms.TextBox();
             this.lblRecommended = new System.Windows.Forms.Label();
             this.lblLoggedIn = new System.Windows.Forms.Label();
-            this.btnLogInOut = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.lblLogout = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -57,7 +58,7 @@
             // 
             // panelReccomend
             // 
-            this.panelReccomend.Location = new System.Drawing.Point(664, 93);
+            this.panelReccomend.Location = new System.Drawing.Point(665, 230);
             this.panelReccomend.Name = "panelReccomend";
             this.panelReccomend.Size = new System.Drawing.Size(176, 199);
             this.panelReccomend.TabIndex = 2;
@@ -67,17 +68,17 @@
             this.tbMovieName.BackColor = System.Drawing.Color.Bisque;
             this.tbMovieName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMovieName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbMovieName.Location = new System.Drawing.Point(665, 299);
+            this.tbMovieName.Location = new System.Drawing.Point(666, 453);
             this.tbMovieName.Name = "tbMovieName";
             this.tbMovieName.ReadOnly = true;
-            this.tbMovieName.Size = new System.Drawing.Size(170, 29);
+            this.tbMovieName.Size = new System.Drawing.Size(175, 29);
             this.tbMovieName.TabIndex = 3;
             this.tbMovieName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblRecommended
             // 
             this.lblRecommended.AutoSize = true;
-            this.lblRecommended.Location = new System.Drawing.Point(662, 77);
+            this.lblRecommended.Location = new System.Drawing.Point(662, 205);
             this.lblRecommended.Name = "lblRecommended";
             this.lblRecommended.Size = new System.Drawing.Size(117, 13);
             this.lblRecommended.TabIndex = 4;
@@ -86,21 +87,35 @@
             // lblLoggedIn
             // 
             this.lblLoggedIn.AutoSize = true;
-            this.lblLoggedIn.Location = new System.Drawing.Point(523, 9);
+            this.lblLoggedIn.Location = new System.Drawing.Point(627, 26);
             this.lblLoggedIn.Name = "lblLoggedIn";
             this.lblLoggedIn.Size = new System.Drawing.Size(63, 13);
             this.lblLoggedIn.TabIndex = 5;
             this.lblLoggedIn.Text = "Logged as: ";
+            this.lblLoggedIn.Click += new System.EventHandler(this.lblLoggedIn_Click);
             // 
-            // btnLogInOut
+            // btnExit
             // 
-            this.btnLogInOut.Location = new System.Drawing.Point(526, 27);
-            this.btnLogInOut.Name = "btnLogInOut";
-            this.btnLogInOut.Size = new System.Drawing.Size(75, 23);
-            this.btnLogInOut.TabIndex = 6;
-            this.btnLogInOut.Text = "Logout";
-            this.btnLogInOut.UseVisualStyleBackColor = true;
-            this.btnLogInOut.Click += new System.EventHandler(this.button1_Click);
+            this.btnExit.Location = new System.Drawing.Point(665, 581);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(170, 29);
+            this.btnExit.TabIndex = 9;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // lblLogout
+            // 
+            this.lblLogout.AutoSize = true;
+            this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.Location = new System.Drawing.Point(627, 51);
+            this.lblLogout.Name = "lblLogout";
+            this.lblLogout.Size = new System.Drawing.Size(40, 13);
+            this.lblLogout.TabIndex = 10;
+            this.lblLogout.Text = "Logout";
+            this.lblLogout.Click += new System.EventHandler(this.lblLogout_Click);
+            this.lblLogout.MouseEnter += new System.EventHandler(this.lblLogout_MouseEnter);
+            this.lblLogout.MouseLeave += new System.EventHandler(this.lblLogout_MouseLeave);
             // 
             // MovieProgramme
             // 
@@ -108,8 +123,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(847, 626);
-            this.Controls.Add(this.btnLogInOut);
+            this.ClientSize = new System.Drawing.Size(847, 621);
+            this.Controls.Add(this.lblLogout);
+            this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblLoggedIn);
             this.Controls.Add(this.lblRecommended);
             this.Controls.Add(this.tbMovieName);
@@ -135,6 +151,7 @@
         private System.Windows.Forms.TextBox tbMovieName;
         private System.Windows.Forms.Label lblRecommended;
         private System.Windows.Forms.Label lblLoggedIn;
-        private System.Windows.Forms.Button btnLogInOut;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.Label lblLogout;
     }
 }

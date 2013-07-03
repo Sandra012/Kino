@@ -32,11 +32,12 @@
             this.btnAddNewShow = new System.Windows.Forms.Button();
             this.btnViewCustomers = new System.Windows.Forms.Button();
             this.btnViewBookings = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddNewMovie
             // 
-            this.btnAddNewMovie.Location = new System.Drawing.Point(72, 24);
+            this.btnAddNewMovie.Location = new System.Drawing.Point(142, 36);
             this.btnAddNewMovie.Name = "btnAddNewMovie";
             this.btnAddNewMovie.Size = new System.Drawing.Size(133, 40);
             this.btnAddNewMovie.TabIndex = 0;
@@ -46,7 +47,7 @@
             // 
             // btnAddNewShow
             // 
-            this.btnAddNewShow.Location = new System.Drawing.Point(72, 81);
+            this.btnAddNewShow.Location = new System.Drawing.Point(142, 114);
             this.btnAddNewShow.Name = "btnAddNewShow";
             this.btnAddNewShow.Size = new System.Drawing.Size(133, 40);
             this.btnAddNewShow.TabIndex = 1;
@@ -56,7 +57,7 @@
             // 
             // btnViewCustomers
             // 
-            this.btnViewCustomers.Location = new System.Drawing.Point(72, 141);
+            this.btnViewCustomers.Location = new System.Drawing.Point(142, 194);
             this.btnViewCustomers.Name = "btnViewCustomers";
             this.btnViewCustomers.Size = new System.Drawing.Size(133, 40);
             this.btnViewCustomers.TabIndex = 3;
@@ -66,7 +67,7 @@
             // 
             // btnViewBookings
             // 
-            this.btnViewBookings.Location = new System.Drawing.Point(72, 197);
+            this.btnViewBookings.Location = new System.Drawing.Point(142, 267);
             this.btnViewBookings.Name = "btnViewBookings";
             this.btnViewBookings.Size = new System.Drawing.Size(133, 40);
             this.btnViewBookings.TabIndex = 4;
@@ -74,11 +75,22 @@
             this.btnViewBookings.UseVisualStyleBackColor = true;
             this.btnViewBookings.Click += new System.EventHandler(this.btnViewBookings_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(318, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 26);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 260);
+            this.ClientSize = new System.Drawing.Size(420, 382);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnViewBookings);
             this.Controls.Add(this.btnViewCustomers);
             this.Controls.Add(this.btnAddNewShow);
@@ -96,5 +108,6 @@
         private System.Windows.Forms.Button btnAddNewShow;
         private System.Windows.Forms.Button btnViewCustomers;
         private System.Windows.Forms.Button btnViewBookings;
+        private System.Windows.Forms.Button button1;
     }
 }

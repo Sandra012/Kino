@@ -124,5 +124,10 @@ namespace Kino
             Date = str.Substring(0, 9);
             
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
