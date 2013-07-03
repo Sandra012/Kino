@@ -25,7 +25,6 @@ namespace Kino
             InitializeComponent();
             this.conn = conn;
             ChosenDate = dateTimePicker1.Value.ToString("MM/dd/yyyy");
-            label1.Text = ChosenDate;
             this.CustomerId = CustomerId;
             ProgramContent = new ProgramContent(conn, ChosenDate, CustomerId);
         }
@@ -34,7 +33,7 @@ namespace Kino
         {
             ProgramContent.Draw(this.panel1);
             this.Size = new Size(panel1.Size.Width, panel1.Size.Height + 50);
-            RecommendedMovie1 = new RecommendedMovie(CustomerId, panelReccomend, conn);
+            RecommendedMovie1 = new RecommendedMovie(CustomerId, panelReccomend, tbMovieName, conn);
             RecommendedMovie1.Draw();
         }
 

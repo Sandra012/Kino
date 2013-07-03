@@ -24,12 +24,13 @@ namespace Kino
         DataTable dtMovieId;
         DataTable dtRating;
         OracleDataAdapter da;
+
         public string QueryMovieDetails { get; set; }
         public string QueryRoles { get; set; }
         public int MovieId { get; set; }
         public decimal Rating { get; set; }
 
-        public MovieDetails(string MovieName, OracleConnection conn)
+        public MovieDetails(string MovieName, Bitmap photo, OracleConnection conn)
         {
             InitializeComponent();
             this.conn = conn;
@@ -46,6 +47,9 @@ namespace Kino
             dtMovieId = new DataTable();
             dtRating = new DataTable();
 
+            //slikata
+            pbPhoto.Image = photo;
+            pbPhoto.SizeMode = PictureBoxSizeMode.Zoom;
 
             da.SelectCommand = new OracleCommand(QueryMovieDetails, conn);
             da.Fill(dtMovieDetails);
@@ -148,6 +152,7 @@ namespace Kino
                 this.Controls.Find("radioButton" + i.ToString(), true)[0].Enabled = false;
             }
         }
+
 
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {

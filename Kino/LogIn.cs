@@ -35,6 +35,7 @@ namespace Kino
                 {
                     MakeReservation MakeReservationForm = new MakeReservation(CustomerId, ShowId, conn);
                     MakeReservationForm.Show();
+                    this.Close();
                 }
             }
             else {

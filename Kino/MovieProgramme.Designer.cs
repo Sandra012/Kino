@@ -31,7 +31,8 @@
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelReccomend = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.tbMovieName = new System.Windows.Forms.TextBox();
+            this.lblRecommended = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -56,17 +57,29 @@
             // 
             this.panelReccomend.Location = new System.Drawing.Point(664, 93);
             this.panelReccomend.Name = "panelReccomend";
-            this.panelReccomend.Size = new System.Drawing.Size(176, 285);
+            this.panelReccomend.Size = new System.Drawing.Size(176, 199);
             this.panelReccomend.TabIndex = 2;
             // 
-            // label1
+            // tbMovieName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(661, 77);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(117, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Recommenden for you:";
+            this.tbMovieName.BackColor = System.Drawing.Color.Bisque;
+            this.tbMovieName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbMovieName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.tbMovieName.Location = new System.Drawing.Point(665, 299);
+            this.tbMovieName.Name = "tbMovieName";
+            this.tbMovieName.ReadOnly = true;
+            this.tbMovieName.Size = new System.Drawing.Size(170, 29);
+            this.tbMovieName.TabIndex = 3;
+            this.tbMovieName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // lblRecommended
+            // 
+            this.lblRecommended.AutoSize = true;
+            this.lblRecommended.Location = new System.Drawing.Point(662, 77);
+            this.lblRecommended.Name = "lblRecommended";
+            this.lblRecommended.Size = new System.Drawing.Size(117, 13);
+            this.lblRecommended.TabIndex = 4;
+            this.lblRecommended.Text = "Recommended for you:";
             // 
             // MovieProgramme
             // 
@@ -75,7 +88,8 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(847, 626);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblRecommended);
+            this.Controls.Add(this.tbMovieName);
             this.Controls.Add(this.panelReccomend);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTimePicker1);
@@ -93,6 +107,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panelReccomend;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox tbMovieName;
+        private System.Windows.Forms.Label lblRecommended;
     }
 }

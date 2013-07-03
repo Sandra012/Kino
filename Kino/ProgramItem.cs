@@ -107,7 +107,7 @@ namespace Kino
             //postavuvanje na lokacijata na labelite i kopcinjata za sekoj item
             lblMovieName.Location = new Point(110, distance);
             lblMovieGenreDration.Location = new Point(110, distance + 30);
-            lblRoomNumber.Location = new Point(260, distance + 5);
+            lblRoomNumber.Location = new Point(280, distance + 5);
             lblTime.Location = new Point(370, distance + 5);
             btnBookNow.Location = new Point(470, distance + 5);
             pbPhoto.Location = new Point(10, distance);
@@ -124,12 +124,15 @@ namespace Kino
             this.btnBookNow.Click += new System.EventHandler(this.btnBookNow_Click);
             this.btnBookNow.MouseEnter += new System.EventHandler(this.btnBookNow_Enter);
             this.btnBookNow.MouseLeave += new System.EventHandler(this.btnBookNow_Leave);
+            this.pbPhoto.Click += new System.EventHandler(this.lblMovieName_Click);
+            this.pbPhoto.MouseEnter += new System.EventHandler(this.btnBookNow_Enter);
+            this.pbPhoto.MouseLeave += new System.EventHandler(this.btnBookNow_Leave);
         }
 
 
 
         private void lblMovieName_Click(object sender, EventArgs e) {
-            MovieDetails newMovieDetailsForm = new MovieDetails(lblMovieName.Text, conn);
+            MovieDetails newMovieDetailsForm = new MovieDetails(lblMovieName.Text, Photo, conn);
             newMovieDetailsForm.Show();
         }
 
