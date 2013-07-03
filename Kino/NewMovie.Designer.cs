@@ -47,7 +47,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.tbWriter = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // tbMovieTitle
@@ -216,23 +215,12 @@
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(12, 438);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(32, 13);
-            this.label10.TabIndex = 19;
-            this.label10.Text = "Year:";
-            this.label10.Visible = false;
-            // 
             // NewMovie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Kino.Properties.Resources.AddNewMovieBackground;
             this.ClientSize = new System.Drawing.Size(430, 517);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.tbWriter);
@@ -281,6 +269,5 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox tbWriter;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Label label10;
     }
 }

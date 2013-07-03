@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.tbTotalPrice = new System.Windows.Forms.TextBox();
             this.lblShow = new System.Windows.Forms.Label();
+            this.tbBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,9 +50,9 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(133, 360);
+            this.btnConfirm.Location = new System.Drawing.Point(95, 372);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(75, 23);
+            this.btnConfirm.Size = new System.Drawing.Size(220, 23);
             this.btnConfirm.TabIndex = 14;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = true;
@@ -59,12 +60,13 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(240, 360);
+            this.btnCancel.Location = new System.Drawing.Point(213, 401);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(102, 23);
             this.btnCancel.TabIndex = 15;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // label2
             // 
@@ -110,11 +112,22 @@
             this.lblShow.TabIndex = 21;
             this.lblShow.Text = "Movie Name, Time, Date, Room Number";
             // 
+            // tbBack
+            // 
+            this.tbBack.Location = new System.Drawing.Point(95, 401);
+            this.tbBack.Name = "tbBack";
+            this.tbBack.Size = new System.Drawing.Size(102, 23);
+            this.tbBack.TabIndex = 22;
+            this.tbBack.Text = "Back to Seats";
+            this.tbBack.UseVisualStyleBackColor = true;
+            this.tbBack.Click += new System.EventHandler(this.tbBack_Click);
+            // 
             // BookingDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(437, 452);
+            this.Controls.Add(this.tbBack);
             this.Controls.Add(this.lblShow);
             this.Controls.Add(this.tbTotalPrice);
             this.Controls.Add(this.label3);
@@ -141,5 +154,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox tbTotalPrice;
         private System.Windows.Forms.Label lblShow;
+        private System.Windows.Forms.Button tbBack;
     }
 }

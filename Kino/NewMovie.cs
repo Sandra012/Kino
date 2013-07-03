@@ -125,7 +125,7 @@ namespace Kino
                 {
                     da.SelectCommand = new OracleCommand("SELECT PERSONID FROM PERSONS WHERE UPPER(FIRSTNAME)=UPPER('" + nameSurname[0] + "') AND UPPER(LASTNAME)=UPPER('" + nameSurname[1] + "')", conn);
                     da.Fill(dt);
-                    label10.Text = dt.Rows[0][0].ToString();
+                    //label10.Text = dt.Rows[0][0].ToString();
                 }
                 catch (IndexOutOfRangeException ex)
                 {

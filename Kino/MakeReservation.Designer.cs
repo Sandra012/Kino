@@ -94,6 +94,7 @@
             this.G3 = new System.Windows.Forms.Button();
             this.G2 = new System.Windows.Forms.Button();
             this.G1 = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.gbSeats.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -117,7 +118,7 @@
             // 
             // tbTotalPrice
             // 
-            this.tbTotalPrice.Location = new System.Drawing.Point(125, 489);
+            this.tbTotalPrice.Location = new System.Drawing.Point(313, 26);
             this.tbTotalPrice.Name = "tbTotalPrice";
             this.tbTotalPrice.ReadOnly = true;
             this.tbTotalPrice.Size = new System.Drawing.Size(38, 20);
@@ -126,7 +127,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(59, 492);
+            this.label3.Location = new System.Drawing.Point(247, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 49;
@@ -134,11 +135,11 @@
             // 
             // btnContinue
             // 
-            this.btnContinue.Location = new System.Drawing.Point(276, 487);
+            this.btnContinue.Location = new System.Drawing.Point(49, 489);
             this.btnContinue.Name = "btnContinue";
-            this.btnContinue.Size = new System.Drawing.Size(75, 23);
+            this.btnContinue.Size = new System.Drawing.Size(143, 23);
             this.btnContinue.TabIndex = 51;
-            this.btnContinue.Text = "Finish";
+            this.btnContinue.Text = "Next";
             this.btnContinue.UseVisualStyleBackColor = true;
             this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
@@ -991,11 +992,22 @@
             this.G1.UseVisualStyleBackColor = false;
             this.G1.Click += new System.EventHandler(this.G1_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(208, 489);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(143, 23);
+            this.btnCancel.TabIndex = 53;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // MakeReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(534, 568);
+            this.ClientSize = new System.Drawing.Size(409, 558);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.gbSeats);
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.tbTotalPrice);
@@ -1081,5 +1093,6 @@
         private System.Windows.Forms.Button G4;
         private System.Windows.Forms.Button G3;
         private System.Windows.Forms.Button G2;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

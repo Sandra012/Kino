@@ -16,6 +16,7 @@ namespace Kino
     {
         OracleConnection conn;
         DataTable dt;
+        DataTable dtName;
         OracleDataAdapter da;
         public string Date { get; set; }
         private List<ProgramItem> Items; 
@@ -28,6 +29,7 @@ namespace Kino
             this.conn = conn;
             this.Date = ChosenDate;
             da = new OracleDataAdapter();
+            dtName = new DataTable();
             dt = new DataTable();
             Items = new List<ProgramItem>();
             
@@ -61,6 +63,27 @@ namespace Kino
             }
 
             //panel.Invalidate();
+        }
+
+        public string GetCustomerName(int CustomerId){
+            
+            if (CustomerId != -1)
+            {
+                string Query = "SELECT FIRSTNAME || ' ' || LASTNAME FROM CUSTOMERS WHERE CUSTOMERID = " + CustomerId.ToString();
+                da.SelectCommand = new OracleCommand(Query, conn);
+                da.Fill(dtName);
+                this.CustomerId = CustomerId;
+                foreach (ProgramItem item in Items)
+                {
+                    item.CustomerId = -1;
+                }
+                return dtName.Rows[0][0].ToString();
+            }
+            else 
+            {
+                return null;
+            }
+
         }
     }
 }

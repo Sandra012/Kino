@@ -147,5 +147,17 @@ namespace Kino
             da.Fill(dt);
             return Convert.ToInt16(dt.Rows[0][0].ToString().Trim());
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void tbBack_Click(object sender, EventArgs e)
+        {
+            MakeReservation MakeReservationForm = new MakeReservation(CustomerId, ShowId, conn);
+            MakeReservationForm.Show();
+            this.Close();
+        }
     }
 }

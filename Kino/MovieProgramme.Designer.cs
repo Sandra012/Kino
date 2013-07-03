@@ -33,6 +33,8 @@
             this.panelReccomend = new System.Windows.Forms.Panel();
             this.tbMovieName = new System.Windows.Forms.TextBox();
             this.lblRecommended = new System.Windows.Forms.Label();
+            this.lblLoggedIn = new System.Windows.Forms.Label();
+            this.btnLogInOut = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // dateTimePicker1
@@ -81,6 +83,25 @@
             this.lblRecommended.TabIndex = 4;
             this.lblRecommended.Text = "Recommended for you:";
             // 
+            // lblLoggedIn
+            // 
+            this.lblLoggedIn.AutoSize = true;
+            this.lblLoggedIn.Location = new System.Drawing.Point(523, 9);
+            this.lblLoggedIn.Name = "lblLoggedIn";
+            this.lblLoggedIn.Size = new System.Drawing.Size(63, 13);
+            this.lblLoggedIn.TabIndex = 5;
+            this.lblLoggedIn.Text = "Logged as: ";
+            // 
+            // btnLogInOut
+            // 
+            this.btnLogInOut.Location = new System.Drawing.Point(526, 27);
+            this.btnLogInOut.Name = "btnLogInOut";
+            this.btnLogInOut.Size = new System.Drawing.Size(75, 23);
+            this.btnLogInOut.TabIndex = 6;
+            this.btnLogInOut.Text = "Logout";
+            this.btnLogInOut.UseVisualStyleBackColor = true;
+            this.btnLogInOut.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MovieProgramme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -88,6 +109,8 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(847, 626);
+            this.Controls.Add(this.btnLogInOut);
+            this.Controls.Add(this.lblLoggedIn);
             this.Controls.Add(this.lblRecommended);
             this.Controls.Add(this.tbMovieName);
             this.Controls.Add(this.panelReccomend);
@@ -111,5 +134,7 @@
         private System.Windows.Forms.Panel panelReccomend;
         private System.Windows.Forms.TextBox tbMovieName;
         private System.Windows.Forms.Label lblRecommended;
+        private System.Windows.Forms.Label lblLoggedIn;
+        private System.Windows.Forms.Button btnLogInOut;
     }
 }

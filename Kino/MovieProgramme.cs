@@ -16,6 +16,7 @@ namespace Kino
     {
         OracleConnection conn;
         public string ChosenDate { get; set; }
+        public string CustomerName { get; set; }
         ProgramContent ProgramContent;
         public int CustomerId { get; set; }
         RecommendedMovie RecommendedMovie1;
@@ -27,6 +28,8 @@ namespace Kino
             ChosenDate = dateTimePicker1.Value.ToString("MM/dd/yyyy");
             this.CustomerId = CustomerId;
             ProgramContent = new ProgramContent(conn, ChosenDate, CustomerId);
+            CustomerName = ProgramContent.GetCustomerName(CustomerId);
+            SetLoginLabel();
         }
 
         private void MovieProgramme_Load(object sender, EventArgs e)
@@ -59,6 +62,24 @@ namespace Kino
         private void MovieProgramme_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        public void SetLoginLabel() {
+            CustomerName = ProgramContent.GetCustomerName(CustomerId);
+            if (CustomerName != null)
+            {
+                lblLoggedIn.Text += CustomerName;
+            }
+            else {
+                lblLoggedIn.Text = "Not logged in.";
+                btnLogInOut.Visible = false;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CustomerId = -1;
+            SetLoginLabel();
         }
     }
 }
