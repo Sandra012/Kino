@@ -111,7 +111,7 @@ WHERE A.SUM > (SELECT AVG(TOTALPRICE) FROM BOOKINGS))";
 
         private void btnFavouriteActors_Click(object sender, EventArgs e)
         {
-            QueryFavouriteActors = @"SELECT DISTINCT C.FIRSTNAME || ' ' || C.LASTNAME as CUSTOMER, P.FIRSTNAME || ' ' || P.LASTNAME AS ACTOR
+            QueryFavouriteActors = @"SELECT C.FIRSTNAME || ' ' || C.LASTNAME as CUSTOMER, P.FIRSTNAME || ' ' || P.LASTNAME AS ACTOR
 FROM CUSTOMERS C, PERSONS P,
 (SELECT A.CUSTOMERID, A.PERSONID
 FROM (SELECT CUSTOMERS.CUSTOMERID, PERSONID, COUNT(PERSONID) COUNT
@@ -144,7 +144,13 @@ ORDER BY C.CUSTOMERID";
 
             da.SelectCommand = new OracleCommand(QueryFavouriteActors, conn);
             dtFavouriteActors = new DataTable();
-            da.Fill(dtFavouriteActors);
+            try
+            {
+                da.Fill(dtFavouriteActors);
+            }
+            catch (OracleException ex) {
+                MessageBox.Show(ex.Message);
+            }
             dgwCustomers.DataSource = dtFavouriteActors;
         }
 
