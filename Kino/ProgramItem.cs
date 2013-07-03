@@ -61,9 +61,10 @@ namespace Kino
 
             //imeto na slikata od Resorces (site prazni mesta i znaci da se zamenat so _)
             String PhotoName = MovieName;
+
             PhotoName = PhotoName.Replace(' ', '_');
             PhotoName = PhotoName.Replace('&', '_');
-            PhotoName.Replace('.', '_');
+            PhotoName = PhotoName.Replace('.', '_');
 
             System.Resources.ResourceManager mng = new System.Resources.ResourceManager("Kino.Properties.Resources", typeof(Properties.Resources).Assembly); 
             Photo = (Bitmap)mng.GetObject(PhotoName);
@@ -91,8 +92,8 @@ namespace Kino
             lblTime.AutoSize = true;
             
             //dimenzii na slikata
-            pbPhoto.Width = 60;
-            pbPhoto.Height = 90;
+            pbPhoto.Width = 80;
+            pbPhoto.Height = 110;
             pbPhoto.SizeMode = PictureBoxSizeMode.Zoom;
 
             //inicijalizacija na tekst vo labelite
@@ -104,8 +105,8 @@ namespace Kino
             pbPhoto.Image = Photo;
 
             //postavuvanje na lokacijata na labelite i kopcinjata za sekoj item
-            lblMovieName.Location = new Point(80, distance);
-            lblMovieGenreDration.Location = new Point(80, distance + 30);
+            lblMovieName.Location = new Point(110, distance);
+            lblMovieGenreDration.Location = new Point(110, distance + 30);
             lblRoomNumber.Location = new Point(260, distance + 5);
             lblTime.Location = new Point(370, distance + 5);
             btnBookNow.Location = new Point(470, distance + 5);

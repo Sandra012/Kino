@@ -18,6 +18,7 @@ namespace Kino
         public string ChosenDate { get; set; }
         ProgramContent ProgramContent;
         public int CustomerId { get; set; }
+        RecommendedMovie RecommendedMovie1;
 
         public MovieProgramme(OracleConnection conn, int CustomerId)
         {
@@ -33,6 +34,8 @@ namespace Kino
         {
             ProgramContent.Draw(this.panel1);
             this.Size = new Size(panel1.Size.Width, panel1.Size.Height + 50);
+            RecommendedMovie1 = new RecommendedMovie(CustomerId, panelReccomend, conn);
+            RecommendedMovie1.Draw();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)

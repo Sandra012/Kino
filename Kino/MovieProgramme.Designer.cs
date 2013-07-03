@@ -30,6 +30,7 @@
         {
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panelReccomend = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -43,30 +44,39 @@
             // 
             // panel1
             // 
-            this.panel1.AutoSize = true;
+            this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(41, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(728, 630);
+            this.panel1.Size = new System.Drawing.Size(617, 517);
             this.panel1.TabIndex = 1;
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
+            // panelReccomend
+            // 
+            this.panelReccomend.Location = new System.Drawing.Point(664, 93);
+            this.panelReccomend.Name = "panelReccomend";
+            this.panelReccomend.Size = new System.Drawing.Size(176, 285);
+            this.panelReccomend.TabIndex = 2;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(303, 32);
+            this.label1.Location = new System.Drawing.Point(661, 77);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
+            this.label1.Size = new System.Drawing.Size(117, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Recommenden for you:";
             // 
             // MovieProgramme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(800, 878);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(847, 626);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelReccomend);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "MovieProgramme";
@@ -82,6 +92,7 @@
 
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panelReccomend;
         private System.Windows.Forms.Label label1;
     }
 }
