@@ -247,6 +247,87 @@
   <ItemGroup>
     <None Include="Resources\lobby_background.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\After Earth.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Django.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Epic.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fast &amp; Furious 6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\G.I. Joe 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gangster Squad.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Gatsby.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Iron Man 3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Life of Pi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lobby3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Olympus has Fallen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Pain &amp; Gain.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scary Movie 5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Side Effects.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Star Treck.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Swan Lake.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Big Wedding.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Heat.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Internship.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Last Exorcism 2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The Lone Ranger.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Hangover Part III.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Trance.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Upside down.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\World War Z.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zambezia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Zikina Dinastija.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

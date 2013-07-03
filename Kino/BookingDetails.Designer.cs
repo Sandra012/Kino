@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 57);
+            this.label1.Location = new System.Drawing.Point(137, 67);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(185, 13);
             this.label1.TabIndex = 0;
@@ -49,7 +49,7 @@
             // 
             // btnConfirm
             // 
-            this.btnConfirm.Location = new System.Drawing.Point(58, 274);
+            this.btnConfirm.Location = new System.Drawing.Point(133, 360);
             this.btnConfirm.Name = "btnConfirm";
             this.btnConfirm.Size = new System.Drawing.Size(75, 23);
             this.btnConfirm.TabIndex = 14;
@@ -59,7 +59,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(165, 274);
+            this.btnCancel.Location = new System.Drawing.Point(240, 360);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 15;
@@ -69,7 +69,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(114, 178);
+            this.label2.Location = new System.Drawing.Point(192, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(71, 13);
             this.label2.TabIndex = 16;
@@ -78,7 +78,7 @@
             // lbSeats
             // 
             this.lbSeats.FormattingEnabled = true;
-            this.lbSeats.Location = new System.Drawing.Point(120, 93);
+            this.lbSeats.Location = new System.Drawing.Point(198, 122);
             this.lbSeats.Name = "lbSeats";
             this.lbSeats.Size = new System.Drawing.Size(65, 69);
             this.lbSeats.TabIndex = 17;
@@ -86,7 +86,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(117, 241);
+            this.label3.Location = new System.Drawing.Point(192, 327);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
             this.label3.TabIndex = 19;
@@ -95,7 +95,7 @@
             // 
             // tbTotalPrice
             // 
-            this.tbTotalPrice.Location = new System.Drawing.Point(183, 238);
+            this.tbTotalPrice.Location = new System.Drawing.Point(258, 324);
             this.tbTotalPrice.Name = "tbTotalPrice";
             this.tbTotalPrice.ReadOnly = true;
             this.tbTotalPrice.Size = new System.Drawing.Size(57, 20);
@@ -104,7 +104,7 @@
             // lblShow
             // 
             this.lblShow.AutoSize = true;
-            this.lblShow.Location = new System.Drawing.Point(64, 206);
+            this.lblShow.Location = new System.Drawing.Point(130, 275);
             this.lblShow.Name = "lblShow";
             this.lblShow.Size = new System.Drawing.Size(199, 13);
             this.lblShow.TabIndex = 21;
@@ -114,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(314, 346);
+            this.ClientSize = new System.Drawing.Size(437, 452);
             this.Controls.Add(this.lblShow);
             this.Controls.Add(this.tbTotalPrice);
             this.Controls.Add(this.label3);

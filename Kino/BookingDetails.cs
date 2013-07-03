@@ -78,7 +78,10 @@ namespace Kino
         {
             string BookingNumber = CreateNewBooking();
             CreateNewTickets(BookingNumber);
-            MessageBox.Show("Nice");
+            DialogResult result = MessageBox.Show("Your booking number is " + BookingNumber + "\nYou can take your tickets at the entrance!");
+            if (result == DialogResult.OK) {
+                this.Close();
+            }
         }
 
         public string CreateNewBooking() {

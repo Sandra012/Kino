@@ -85,6 +85,7 @@
             this.Controls.Add(this.btnAddNewMovie);
             this.Name = "Administration";
             this.Text = "Administration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Administration_FormClosing);
             this.ResumeLayout(false);
 
         }

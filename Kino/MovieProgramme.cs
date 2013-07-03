@@ -53,5 +53,10 @@ namespace Kino
             this.Cursor = Cursors.Arrow;
 
         }
+
+        private void MovieProgramme_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

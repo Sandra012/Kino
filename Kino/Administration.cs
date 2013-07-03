@@ -46,6 +46,11 @@ namespace Kino
             form.Show();
         }
 
-        // Мислам дека нема потреба од додавање нова сала, бидејќи каде побогу после градењето на киното, си видел да си додаваат уште по некоја саличка како им текне? а и доста се 4 screeningrooms мислам? м?
+        private void Administration_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+            
     }
 }

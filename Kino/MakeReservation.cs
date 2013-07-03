@@ -81,7 +81,7 @@ namespace Kino
 
             BookingDetails BookingDetails1 = new BookingDetails(ShowId, CustomerId, Selected, Price, RoomNumber, conn);
             BookingDetails1.Show();
-
+            this.Close();
         }
 
         public void ReserveSeat(object sender) {

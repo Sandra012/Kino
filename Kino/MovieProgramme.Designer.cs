@@ -46,7 +46,7 @@
             this.panel1.AutoSize = true;
             this.panel1.Location = new System.Drawing.Point(41, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(609, 571);
+            this.panel1.Size = new System.Drawing.Size(728, 630);
             this.panel1.TabIndex = 1;
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
@@ -65,12 +65,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(703, 689);
+            this.ClientSize = new System.Drawing.Size(800, 878);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "MovieProgramme";
             this.Text = "MovieProgramme";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MovieProgramme_FormClosing);
             this.Load += new System.EventHandler(this.MovieProgramme_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

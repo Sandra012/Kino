@@ -30,8 +30,6 @@ namespace Kino
             {
                 conn = new OracleConnection(" User Id=DBA_20122013L_GRP_037 ;Password=5593940;Data Source=localhost:1521/ORCL");
                 conn.Open();
-               
-                
             }
             catch (Exception ex)
             {
@@ -46,8 +44,9 @@ namespace Kino
 
         private void btnRepertoar_Click_1(object sender, EventArgs e)
         {
-            Form MovieProgrammeForm = new MovieProgramme(conn, -1); //korisnikot e nenajaven
+            Form MovieProgrammeForm = new MovieProgramme(conn, -1); //korisnikot ne e najaven, otvori repertoar
             MovieProgrammeForm.Show();
+            this.Hide(); // za da ne se otvoreni mnogu prozorci
         }
 
         private void btnNewMovie_Click(object sender, EventArgs e)
@@ -71,12 +70,13 @@ namespace Kino
             { //ako e uspesno logiranjeto
 
                 if (LogValidator.isAdmin(CustomerId))
-                {  // ako e admin, odtvori forma za administracija
+                {  // ako e admin, otvori forma za administracija
                     DialogResult dr = MessageBox.Show("Successful login as Administrator!", "Success", MessageBoxButtons.OK);
                     if (dr == DialogResult.OK)
                     {
                         Administration AdminForm = new Administration(conn);
                         AdminForm.Show();
+                        this.Hide();
                     }
                 }
 
@@ -87,6 +87,7 @@ namespace Kino
                     {
                         MovieProgramme NewMovieProgramme = new MovieProgramme(conn, CustomerId);
                         NewMovieProgramme.Show();
+                        this.Hide();
                     }
                 }
             }
