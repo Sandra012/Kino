@@ -72,15 +72,15 @@ namespace Kino
                 string Query = "SELECT FIRSTNAME || ' ' || LASTNAME FROM CUSTOMERS WHERE CUSTOMERID = " + CustomerId.ToString();
                 da.SelectCommand = new OracleCommand(Query, conn);
                 da.Fill(dtName);
+                return dtName.Rows[0][0].ToString();
+            }
+            else 
+            {
                 this.CustomerId = CustomerId;
                 foreach (ProgramItem item in Items)
                 {
                     item.CustomerId = -1;
                 }
-                return dtName.Rows[0][0].ToString();
-            }
-            else 
-            {
                 return null;
             }
 
