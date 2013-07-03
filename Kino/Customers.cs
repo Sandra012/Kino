@@ -29,6 +29,7 @@ namespace Kino
             InitializeComponent();
             this.conn = conn;
             ShowAll();
+            btnFavouriteActors.BringToFront();
         }
         private void selectCommand(string query) {
             try
@@ -49,9 +50,9 @@ namespace Kino
             {
 
                 if (i % 2 == 0)
-                    dgwCustomers.Rows[i].DefaultCellStyle.BackColor = Color.LemonChiffon;
+                    dgwCustomers.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
                 else {
-                    dgwCustomers.Rows[i].DefaultCellStyle.BackColor = Color.Wheat;
+                    dgwCustomers.Rows[i].DefaultCellStyle.BackColor = Color.White;
                 }
             }
         }
@@ -152,6 +153,11 @@ ORDER BY C.CUSTOMERID";
                 MessageBox.Show(ex.Message);
             }
             dgwCustomers.DataSource = dtFavouriteActors;
+        }
+
+        private void dgwCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
 
 

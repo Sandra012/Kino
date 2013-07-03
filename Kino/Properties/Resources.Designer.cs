@@ -83,6 +83,16 @@ namespace Kino.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap CustomersBackground {
+            get {
+                object obj = ResourceManager.GetObject("CustomersBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Django {
             get {
                 object obj = ResourceManager.GetObject("Django", resourceCulture);
@@ -213,6 +223,26 @@ namespace Kino.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap movieClapper {
+            get {
+                object obj = ResourceManager.GetObject("movieClapper", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap movieClapper1 {
+            get {
+                object obj = ResourceManager.GetObject("movieClapper1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newShowBackground {
             get {
                 object obj = ResourceManager.GetObject("newShowBackground", resourceCulture);
@@ -286,6 +316,36 @@ namespace Kino.Properties {
         internal static System.Drawing.Bitmap Swan_Lake {
             get {
                 object obj = ResourceManager.GetObject("Swan_Lake", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tape {
+            get {
+                object obj = ResourceManager.GetObject("tape", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tape1 {
+            get {
+                object obj = ResourceManager.GetObject("tape1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tape2 {
+            get {
+                object obj = ResourceManager.GetObject("tape2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

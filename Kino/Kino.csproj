@@ -338,6 +338,24 @@
   <ItemGroup>
     <None Include="Resources\AddNewMovieBackground.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CustomersBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tape.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tape1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tape2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movieClapper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\movieClapper1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
