@@ -118,97 +118,106 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="lobby1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lobby1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Scary_Movie_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Scary Movie 5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lobby3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lobby3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lobby2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lobby2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="lobby_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lobby_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="After_Earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\After Earth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Django" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Django.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Epic" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Epic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Fast___Furious_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Fast &amp; Furious 6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gangster_Squad" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gangster Squad.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Gatsby" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Gatsby.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="G_I__Joe_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\G.I. Joe 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="newShowBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\newShowBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Iron_Man_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iron Man 3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Life_of_Pi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Life of Pi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="The_Hangover_Part_III" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The_Hangover Part III.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lobby31" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lobby3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Olympus_has_Fallen" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Olympus has Fallen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Pain___Gain" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Pain &amp; Gain.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Scary_Movie_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Scary Movie 5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Side_Effects" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Side Effects.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Star_Treck" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Star Treck.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Swan_Lake" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Swan Lake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Fast___Furious_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Fast &amp; Furious 6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="The_Big_Wedding" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Big Wedding.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="The_Hangover_Part_III" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The_Hangover Part III.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="The_Heat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Heat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="The_Internship" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Internship.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="The_Last_Exorcism_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The Last Exorcism 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="G_I__Joe_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\G.I. Joe 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="The_Lone_Ranger" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Lone Ranger.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Trance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Trance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Upside_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Upside down.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="World_War_Z" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\World War Z.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Life_of_Pi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Life of Pi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zambezia" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Zambezia.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Zikina_Dinastija" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Zikina Dinastija.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Upside_down" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Upside down.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Internship" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Internship.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Django" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Django.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Trance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Trance.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pain___Gain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Pain &amp; Gain.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Epic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Epic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lobby1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lobby1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lobby_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lobby_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gatsby" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gatsby.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lobby31" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lobby3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lobby2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lobby2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Star_Treck" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Star Treck.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="rsz_1rsz_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_1rsz_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="World_War_Z" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\World War Z.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Last_Exorcism_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Last Exorcism 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="After_Earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\After Earth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lobby3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lobby3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Heat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The Heat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Gangster_Squad" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Gangster Squad.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Side_Effects" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Side Effects.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Olympus_has_Fallen" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Olympus has Fallen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Swan_Lake" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Swan Lake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AddNewMovieBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddNewMovieBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
