@@ -333,6 +333,16 @@ namespace Kino.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tape_vertical {
+            get {
+                object obj = ResourceManager.GetObject("tape_vertical", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tape1 {
             get {
                 object obj = ResourceManager.GetObject("tape1", resourceCulture);

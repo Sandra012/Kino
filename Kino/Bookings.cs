@@ -23,6 +23,7 @@ namespace Kino
         {
             InitializeComponent();
             this.conn = conn;
+            btnFind.BringToFront();
         }
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -57,11 +58,11 @@ namespace Kino
             for (int i = 0; i < dgvBookings.Rows.Count; i++) {
                 if (i % 2 == 0)
                 {
-                    dgvBookings.Rows[i].DefaultCellStyle.BackColor = Color.FromArgb(192, 255, 192);
+                    dgvBookings.Rows[i].DefaultCellStyle.BackColor = Color.White;
 
                 }
                 else {
-                    dgvBookings.Rows[i].DefaultCellStyle.BackColor = Color.MintCream;
+                    dgvBookings.Rows[i].DefaultCellStyle.BackColor = Color.LightGray;
                 }
             }
             dgvBookings.BackgroundColor = Color.White;
