@@ -37,59 +37,75 @@
             // 
             // btnAddNewMovie
             // 
-            this.btnAddNewMovie.Location = new System.Drawing.Point(142, 36);
+            this.btnAddNewMovie.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddNewMovie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewMovie.ForeColor = System.Drawing.Color.PeachPuff;
+            this.btnAddNewMovie.Location = new System.Drawing.Point(152, 80);
             this.btnAddNewMovie.Name = "btnAddNewMovie";
             this.btnAddNewMovie.Size = new System.Drawing.Size(133, 40);
             this.btnAddNewMovie.TabIndex = 0;
             this.btnAddNewMovie.Text = "Add new movie";
-            this.btnAddNewMovie.UseVisualStyleBackColor = true;
+            this.btnAddNewMovie.UseVisualStyleBackColor = false;
             this.btnAddNewMovie.Click += new System.EventHandler(this.btnAddNewMovie_Click);
             // 
             // btnAddNewShow
             // 
-            this.btnAddNewShow.Location = new System.Drawing.Point(142, 114);
+            this.btnAddNewShow.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnAddNewShow.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddNewShow.ForeColor = System.Drawing.Color.PeachPuff;
+            this.btnAddNewShow.Location = new System.Drawing.Point(153, 136);
             this.btnAddNewShow.Name = "btnAddNewShow";
             this.btnAddNewShow.Size = new System.Drawing.Size(133, 40);
             this.btnAddNewShow.TabIndex = 1;
             this.btnAddNewShow.Text = "Add new show";
-            this.btnAddNewShow.UseVisualStyleBackColor = true;
+            this.btnAddNewShow.UseVisualStyleBackColor = false;
             this.btnAddNewShow.Click += new System.EventHandler(this.btnAddNewShow_Click);
             // 
             // btnViewCustomers
             // 
-            this.btnViewCustomers.Location = new System.Drawing.Point(142, 194);
+            this.btnViewCustomers.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewCustomers.ForeColor = System.Drawing.Color.PeachPuff;
+            this.btnViewCustomers.Location = new System.Drawing.Point(153, 188);
             this.btnViewCustomers.Name = "btnViewCustomers";
             this.btnViewCustomers.Size = new System.Drawing.Size(133, 40);
             this.btnViewCustomers.TabIndex = 3;
             this.btnViewCustomers.Text = "View customers";
-            this.btnViewCustomers.UseVisualStyleBackColor = true;
+            this.btnViewCustomers.UseVisualStyleBackColor = false;
             this.btnViewCustomers.Click += new System.EventHandler(this.btnViewCustomers_Click);
             // 
             // btnViewBookings
             // 
-            this.btnViewBookings.Location = new System.Drawing.Point(142, 267);
+            this.btnViewBookings.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnViewBookings.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewBookings.ForeColor = System.Drawing.Color.PeachPuff;
+            this.btnViewBookings.Location = new System.Drawing.Point(152, 240);
             this.btnViewBookings.Name = "btnViewBookings";
             this.btnViewBookings.Size = new System.Drawing.Size(133, 40);
             this.btnViewBookings.TabIndex = 4;
             this.btnViewBookings.Text = "View bookings";
-            this.btnViewBookings.UseVisualStyleBackColor = true;
+            this.btnViewBookings.UseVisualStyleBackColor = false;
             this.btnViewBookings.Click += new System.EventHandler(this.btnViewBookings_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(318, 344);
+            this.button1.BackColor = System.Drawing.Color.White;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.button1.Location = new System.Drawing.Point(348, 346);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(77, 26);
             this.button1.TabIndex = 5;
             this.button1.Text = "Exit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Administration
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(420, 382);
+            this.BackgroundImage = global::Kino.Properties.Resources.adminbackground;
+            this.ClientSize = new System.Drawing.Size(437, 420);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnViewBookings);
             this.Controls.Add(this.btnViewCustomers);

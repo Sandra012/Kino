@@ -73,6 +73,16 @@ namespace Kino.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adminbackground {
+            get {
+                object obj = ResourceManager.GetObject("adminbackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap After_Earth {
             get {
                 object obj = ResourceManager.GetObject("After_Earth", resourceCulture);

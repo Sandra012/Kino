@@ -127,14 +127,14 @@
   <data name="Iron_Man_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Iron Man 3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="movieClapper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\movieClapper1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="CustomersBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\CustomersBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="After_Earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\After Earth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="The_Hangover_Part_III" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The_Hangover Part III.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Life_of_Pi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Life of Pi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Fast___Furious_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Fast &amp; Furious 6.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -184,14 +184,14 @@
   <data name="Epic" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Epic.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="tape_vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tape_vertical.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lobby1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lobby1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="lobby_background" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lobby_background.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="AddNewMovieBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\AddNewMovieBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Gatsby" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gatsby.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -214,11 +214,11 @@
   <data name="The_Last_Exorcism_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Last Exorcism 2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="After_Earth" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\After Earth.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="movieClapper1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\movieClapper1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="lobby3" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\lobby3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="AddNewMovieBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\AddNewMovieBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="The_Heat" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\The Heat.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,8 +226,11 @@
   <data name="Gangster_Squad" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Gangster Squad.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Life_of_Pi" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Life of Pi.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="CustomersBackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CustomersBackground.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lobby3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lobby3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Side_Effects" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Side Effects.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -238,7 +241,7 @@
   <data name="Swan_Lake" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Swan Lake.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="tape_vertical" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\tape_vertical.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="adminbackground" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adminbackground.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
