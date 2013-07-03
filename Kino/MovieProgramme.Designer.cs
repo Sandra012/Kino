@@ -93,7 +93,9 @@
             this.Controls.Add(this.panelReccomend);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTimePicker1);
+            this.Location = new System.Drawing.Point(50, 50);
             this.Name = "MovieProgramme";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MovieProgramme";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MovieProgramme_FormClosing);
             this.Load += new System.EventHandler(this.MovieProgramme_Load);

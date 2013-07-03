@@ -91,5 +91,10 @@ namespace Kino
             }
 
         }
+
+        private void Bookings_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

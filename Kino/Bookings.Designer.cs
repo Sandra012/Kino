@@ -131,6 +131,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Bookings";
             this.Text = "Bookings";
+            this.Load += new System.EventHandler(this.Bookings_Load);
             this.Enter += new System.EventHandler(this.Bookings_Enter);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Bookings_KeyPress);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBookings)).EndInit();

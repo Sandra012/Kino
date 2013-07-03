@@ -131,6 +131,8 @@ WHERE MOVIEID NOT IN (select MOVIES.MOVIEID as MOVIEID
 GROUP BY MOVIEID)))";
 
             da.SelectCommand = new OracleCommand(Query, conn);
+            dt.Dispose();
+            dt = new DataTable();
             da.Fill(dt);
 
             if (dt.Rows.Count > 0) //ako korisnikot e najaven i postoi takov film

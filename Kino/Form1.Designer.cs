@@ -164,7 +164,9 @@
             this.Controls.Add(this.btnMovies);
             this.Controls.Add(this.btnRepertoar);
             this.DoubleBuffered = true;
+            this.Location = new System.Drawing.Point(50, 50);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Cinemma";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);

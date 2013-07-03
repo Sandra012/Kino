@@ -17,6 +17,7 @@ namespace Kino
     {
         OracleConnection conn;
         DataTable dt;
+        DataTable dtDayWeek;
         OracleDataAdapter da;
         NewReservationContent Content;
         
@@ -25,6 +26,7 @@ namespace Kino
         public int RoomNumber { get; set; }
 
         public int Price { get; set; }
+        public int DayOfTheWeek { get; set; }
 
         private int NumberSeats { get; set; } //kolku sedista saka da rezervira
         private List<Button> Selected { get; set; } //rezervirani sedista
@@ -36,11 +38,22 @@ namespace Kino
             this.CustomerId = CustomerId;
             this.ShowId = ShowId;
             Content = new NewReservationContent(this, conn);
+            da = new OracleDataAdapter();
+            dt = new DataTable();
+            dtDayWeek = new DataTable();
             
             NumberSeats = Convert.ToInt16(tbNumberSeats.Text);
             Selected = new List<Button>();
 
-            Price = 200; //za pocetok neka e 200, posle ke ja dogovorime
+            DayOfTheWeek = GetDay();
+            if (DayOfTheWeek == 2 || DayOfTheWeek == 4)
+                Price = 160;
+            else if (DayOfTheWeek == 1 || DayOfTheWeek == 3)
+                Price = 190;
+            else
+                Price = 210;
+
+            tbTotalPrice.Text = (NumberSeats * Price).ToString();
         }
 
         private void MakeReservation_Load(object sender, EventArgs e)
@@ -105,6 +118,16 @@ namespace Kino
         private void tbNumberSeats_TextChanged(object sender, EventArgs e)
         {
             NumberSeats = Convert.ToInt16(tbNumberSeats.Text);
+            tbTotalPrice.Text = (NumberSeats * Price).ToString();
+        }
+
+        public int GetDay() {
+            string Query = @"SELECT TO_CHAR(DATUM, 'D') D
+                           FROM SHOWS
+                           WHERE SHOWID = " + ShowId.ToString();
+            da.SelectCommand = new OracleCommand(Query, conn);
+            da.Fill(dtDayWeek);
+            return Convert.ToInt16(dtDayWeek.Rows[0][0]);
         }
 
         private void A2_Click(object sender, EventArgs e)

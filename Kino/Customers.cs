@@ -18,16 +18,17 @@ namespace Kino
         OracleConnection conn;
         OracleDataAdapter da;
         DataTable dt;
-        private string Query { get; set; }
+        DataTable dtOverAverage;
+        DataTable dtFavouriteActors;
+        private string QueryAll { get; set; }
+        private string QueryOverAverage { get; set; }
+        private string QueryFavouriteActors { get; set; }
+
         public Customers(OracleConnection conn)
         {     
             InitializeComponent();
             this.conn = conn;
-            Query = "SELECT customerid as \"ID\", firstname as \"Name\",lastname as \"Last Name\", telnumber as \"Number\", email as \"Email\", username as \"Username\", Password as \"Password\", TYPE as \"Type\" FROM CUSTOMERS";
-            selectCommand(Query);
-            dgwCustomers.DataSource = dt;
-            conn.Close();
-            
+            ShowAll();
         }
         private void selectCommand(string query) {
             try
@@ -59,5 +60,94 @@ namespace Kino
         {
 
         }
+
+        public void ShowAll() {
+            QueryAll = "SELECT customerid as \"ID\", firstname as \"Name\",lastname as \"Last Name\", telnumber as \"Number\", email as \"Email\", username as \"Username\", Password as \"Password\", TYPE as \"Type\" FROM CUSTOMERS";
+            selectCommand(QueryAll);
+            dgwCustomers.DataSource = dt;
+        }
+
+        public void ShowOverAverage() {
+            QueryOverAverage = @"SELECT *
+FROM CUSTOMERS
+WHERE CUSTOMERID IN (SELECT CUSTOMERID FROM (SELECT CUSTOMERID, SUM(TOTALPRICE) SUM FROM BOOKINGS GROUP BY CUSTOMERID) A
+WHERE A.SUM > (SELECT AVG(TOTALPRICE) FROM BOOKINGS))";
+            da.SelectCommand = new OracleCommand(QueryOverAverage, conn);
+            dtOverAverage = new DataTable();
+            da.Fill(dtOverAverage);
+            dgwCustomers.DataSource = dtOverAverage;
+        }
+
+        private void rbOverAverage_CheckedChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void rbAll_MouseClick(object sender, MouseEventArgs e)
+        {
+            ShowAll();
+        }
+
+        private void rbOverAverage_MouseClick(object sender, MouseEventArgs e)
+        {
+            ShowOverAverage();
+        }
+
+        private void rbFirstName_Click(object sender, EventArgs e)
+        {
+            dgwCustomers.Sort(dgwCustomers.Columns[3], ListSortDirection.Ascending);
+        }
+
+        private void rbLastName_MouseClick(object sender, MouseEventArgs e)
+        {
+            dgwCustomers.Sort(dgwCustomers.Columns[0], ListSortDirection.Ascending);
+        }
+
+        private void rbID_MouseClick(object sender, MouseEventArgs e)
+        {
+            dgwCustomers.Sort(dgwCustomers.Columns[2], ListSortDirection.Ascending);
+
+        }
+
+        private void btnFavouriteActors_Click(object sender, EventArgs e)
+        {
+            QueryFavouriteActors = @"SELECT DISTINCT C.FIRSTNAME || ' ' || C.LASTNAME as CUSTOMER, P.FIRSTNAME || ' ' || P.LASTNAME AS ACTOR
+FROM CUSTOMERS C, PERSONS P,
+(SELECT A.CUSTOMERID, A.PERSONID
+FROM (SELECT CUSTOMERS.CUSTOMERID, PERSONID, COUNT(PERSONID) COUNT
+FROM ROLES, SHOWS, TICKETS, BOOKINGS, CUSTOMERS
+WHERE TYPEID = (SELECT TYPEID 
+FROM ROLETYPES
+WHERE TYPE = 'Actor') 
+AND ROLES.MOVIEID = SHOWS.MOVIEID
+AND TICKETS.SHOWID = SHOWS.SHOWID
+AND BOOKINGS.BOOKINGID = TICKETS.BOOKINGID
+AND BOOKINGS.CUSTOMERID = CUSTOMERS.CUSTOMERID
+GROUP BY CUSTOMERS.CUSTOMERID, PERSONID) A,
+(SELECT CUSTOMERID, MAX(COUNT) COUNT
+FROM (SELECT CUSTOMERS.CUSTOMERID CUSTOMERID, PERSONID, COUNT(PERSONID) COUNT
+FROM ROLES, SHOWS, TICKETS, BOOKINGS, CUSTOMERS
+WHERE TYPEID = (SELECT TYPEID 
+FROM ROLETYPES
+WHERE TYPE = 'Actor') 
+AND ROLES.MOVIEID = SHOWS.MOVIEID
+AND TICKETS.SHOWID = SHOWS.SHOWID
+AND BOOKINGS.BOOKINGID = TICKETS.BOOKINGID
+AND BOOKINGS.CUSTOMERID = CUSTOMERS.CUSTOMERID
+GROUP BY CUSTOMERS.CUSTOMERID, PERSONID)
+GROUP BY CUSTOMERID) B
+WHERE
+A.CUSTOMERID = B.CUSTOMERID AND A.COUNT = B.COUNT) A
+WHERE
+A.CUSTOMERID = C.CUSTOMERID AND A.PERSONID = P.PERSONID
+ORDER BY C.CUSTOMERID";
+
+            da.SelectCommand = new OracleCommand(QueryFavouriteActors, conn);
+            dtFavouriteActors = new DataTable();
+            da.Fill(dtFavouriteActors);
+            dgwCustomers.DataSource = dtFavouriteActors;
+        }
+
+
     }
 }
