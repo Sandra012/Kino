@@ -329,6 +329,15 @@
   <ItemGroup>
     <None Include="Resources\Zikina Dinastija.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1rsz_background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newShowBackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AddNewMovieBackground.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

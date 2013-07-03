@@ -63,6 +63,16 @@ namespace Kino.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap AddNewMovieBackground {
+            get {
+                object obj = ResourceManager.GetObject("AddNewMovieBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap After_Earth {
             get {
                 object obj = ResourceManager.GetObject("After_Earth", resourceCulture);
@@ -203,6 +213,16 @@ namespace Kino.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap newShowBackground {
+            get {
+                object obj = ResourceManager.GetObject("newShowBackground", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Olympus_has_Fallen {
             get {
                 object obj = ResourceManager.GetObject("Olympus_has_Fallen", resourceCulture);
@@ -216,6 +236,16 @@ namespace Kino.Properties {
         internal static System.Drawing.Bitmap Pain___Gain {
             get {
                 object obj = ResourceManager.GetObject("Pain___Gain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rsz_1rsz_background {
+            get {
+                object obj = ResourceManager.GetObject("rsz_1rsz_background", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
