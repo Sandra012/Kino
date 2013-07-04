@@ -63,7 +63,7 @@ namespace Kino
                 Writer = tbWriter.Text;
 
                 int movieId = nextId("MOVIEID", "MOVIES");
-                Query = "INSERT INTO MOVIES VALUES (nextmovieid.nextval, '" + MovieTitle + "'," + Duration + "," + Year + ",'" + Genre + "'," + Rating + ")";
+                Query = "INSERT INTO MOVIES VALUES (nextmovieid.nextval, '" + MovieTitle + "'," + Duration + "," + Year + ",'" + Genre + ")";
                 insertInto(Query);
                 insertDataCast(tbActors.Text, actorsType, movieId);
                 insertDataCast(tbActresses.Text, actressType, movieId);
@@ -84,6 +84,18 @@ namespace Kino
            
 
            
+        }
+        public void RateMovie(int rating)
+        {
+            //vnesi podatoci za rating vo bazata
+            string NewBookingQuery = "INSERT INTO RATINGS VALUES(" + rating.ToString() + ", " + MovieId.ToString() + ", SYSDATE)";
+            OracleCommand cmd = new OracleCommand();
+            cmd.Connection = conn;
+            cmd.CommandText = NewBookingQuery;
+            int check = cmd.ExecuteNonQuery();
+
+            //iskluci gi site radio buttons za da ne moze da glasa povtorno
+            
         }
         int nextId(string ID, string Table){
             dt = new DataTable();
@@ -125,15 +137,19 @@ namespace Kino
                 {
                     da.SelectCommand = new OracleCommand("SELECT PERSONID FROM PERSONS WHERE UPPER(FIRSTNAME)=UPPER('" + nameSurname[0] + "') AND UPPER(LASTNAME)=UPPER('" + nameSurname[1] + "')", conn);
                     da.Fill(dt);
-                    //label10.Text = dt.Rows[0][0].ToString();
+                    label9.Text = dt.Rows[0][0].ToString();
+
                 }
                 catch (IndexOutOfRangeException ex)
                 {
                     // MessageBox.Show(ex.Message);
                     insertInto("INSERT INTO PERSONS VALUES(PERSONSSEQUENCE.nextval,'" + nameSurname[0] + "','" + nameSurname[1] + "')");
-                  
-                    
+                    da.SelectCommand = new OracleCommand("SELECT PERSONID FROM PERSONS WHERE UPPER(FIRSTNAME)=UPPER('" + nameSurname[0] + "') AND UPPER(LASTNAME)=UPPER('" + nameSurname[1] + "')", conn);
+                    da.Fill(dt);
+                    label9.Text = dt.Rows[0][0].ToString();
                 }
+                
+                personId = Convert.ToInt16(dt.Rows[0][0]);
                 insertInto("INSERT INTO ROLES VALUES(" + movieId + "," + typeId + "," + personId + ")");
 
 
