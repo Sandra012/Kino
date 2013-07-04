@@ -36,11 +36,14 @@
             this.lblLoggedIn = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.lblLogout = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(41, 26);
+            this.dateTimePicker1.Location = new System.Drawing.Point(41, 42);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
@@ -58,7 +61,7 @@
             // 
             // panelReccomend
             // 
-            this.panelReccomend.Location = new System.Drawing.Point(665, 230);
+            this.panelReccomend.Location = new System.Drawing.Point(665, 261);
             this.panelReccomend.Name = "panelReccomend";
             this.panelReccomend.Size = new System.Drawing.Size(176, 199);
             this.panelReccomend.TabIndex = 2;
@@ -68,7 +71,7 @@
             this.tbMovieName.BackColor = System.Drawing.Color.Bisque;
             this.tbMovieName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMovieName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.tbMovieName.Location = new System.Drawing.Point(666, 453);
+            this.tbMovieName.Location = new System.Drawing.Point(666, 484);
             this.tbMovieName.Name = "tbMovieName";
             this.tbMovieName.ReadOnly = true;
             this.tbMovieName.Size = new System.Drawing.Size(175, 29);
@@ -78,9 +81,10 @@
             // lblRecommended
             // 
             this.lblRecommended.AutoSize = true;
-            this.lblRecommended.Location = new System.Drawing.Point(662, 205);
+            this.lblRecommended.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecommended.Location = new System.Drawing.Point(662, 236);
             this.lblRecommended.Name = "lblRecommended";
-            this.lblRecommended.Size = new System.Drawing.Size(117, 13);
+            this.lblRecommended.Size = new System.Drawing.Size(137, 13);
             this.lblRecommended.TabIndex = 4;
             this.lblRecommended.Text = "Recommended for you:";
             // 
@@ -108,7 +112,7 @@
             // 
             this.lblLogout.AutoSize = true;
             this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLogout.Location = new System.Drawing.Point(627, 51);
+            this.lblLogout.Location = new System.Drawing.Point(627, 42);
             this.lblLogout.Name = "lblLogout";
             this.lblLogout.Size = new System.Drawing.Size(40, 13);
             this.lblLogout.TabIndex = 10;
@@ -117,6 +121,25 @@
             this.lblLogout.MouseEnter += new System.EventHandler(this.lblLogout_MouseEnter);
             this.lblLogout.MouseLeave += new System.EventHandler(this.lblLogout_MouseLeave);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Date:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Kino.Properties.Resources.movieClapper1;
+            this.pictureBox1.Location = new System.Drawing.Point(666, 93);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(169, 123);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 12;
+            this.pictureBox1.TabStop = false;
+            // 
             // MovieProgramme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -124,6 +147,8 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(847, 621);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblLogout);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblLoggedIn);
@@ -138,6 +163,7 @@
             this.Text = "MovieProgramme";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MovieProgramme_FormClosing);
             this.Load += new System.EventHandler(this.MovieProgramme_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -153,5 +179,7 @@
         private System.Windows.Forms.Label lblLoggedIn;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label lblLogout;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

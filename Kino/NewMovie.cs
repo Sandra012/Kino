@@ -17,6 +17,7 @@ namespace Kino
         OracleConnection conn;
         OracleDataAdapter da;
         DataTable dt;
+        DataTable dtMovieId;
         public string Query { get; set; }
         public string MovieTitle{get;set;}
         public string Genre{get;set;}
@@ -32,21 +33,24 @@ namespace Kino
         public readonly int producerType = 3;
         public readonly int writerType = 4;
         public readonly int actressType = 5;
-     
+
+        public int MovieId { get; set; }
         
         public NewMovie(OracleConnection conn)
         {
+            InitializeComponent();
+            
             this.conn=conn;
             da=new OracleDataAdapter();
-           
-            InitializeComponent();
+            dt = new DataTable();
+            dtMovieId = new DataTable();
 
-          
+            MovieId = 1;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            if ((tbMovieTitle.Text.Trim() == "") || (tbActors.Text.Trim() == "") || (tbActresses.Text.Trim() == "") || (tbDirector.Text.Trim() == "") || (tbDuration.Text.Trim() == "") || (tbGenre.Text.Trim() == "") || (tbWriter.Text.Trim() == "") || (tbYear.Text.Trim() == "") || (tbRating.Text.Trim() == ""))
+            if ((tbMovieTitle.Text.Trim() == "") || (tbActors.Text.Trim() == "") || (tbActresses.Text.Trim() == "") || (tbDirector.Text.Trim() == "") || (tbDuration.Text.Trim() == "") || (tbGenre.Text.Trim() == "") || (tbWriter.Text.Trim() == "") || (tbYear.Text.Trim() == ""))
             {
                 MessageBox.Show("Внесете податоци во секое поле"); return;
             }
@@ -56,20 +60,24 @@ namespace Kino
                 Genre = tbGenre.Text;
                 Duration = (long)Convert.ToInt64(tbDuration.Text);
                 Year = (long)Convert.ToInt64(tbYear.Text);
-                Rating = Convert.ToDecimal(tbRating.Text);
+                //Rating = Convert.ToDecimal(tbRating.Text);
                 Actors = tbActors.Text;
                 Actresses = tbActresses.Text;
                 Director = tbDirector.Text;
                 Writer = tbWriter.Text;
 
-                int movieId = nextId("MOVIEID", "MOVIES");
-                Query = "INSERT INTO MOVIES VALUES (nextmovieid.nextval, '" + MovieTitle + "'," + Duration + "," + Year + ",'" + Genre + ")";
+                Query = "INSERT INTO MOVIES VALUES (nextmovieid.nextval, '" + MovieTitle + "'," + Duration + "," + Year + ",'" + Genre + "')";
                 insertInto(Query);
-                insertDataCast(tbActors.Text, actorsType, movieId);
-                insertDataCast(tbActresses.Text, actressType, movieId);
-                insertDataCast(tbDirector.Text, directorType, movieId);
-                insertDataCast(tbWriter.Text, writerType, movieId);
+                
+                MovieId = GetMovieId(MovieTitle); //MovieId na filmot sto e vnesen
+                
+                insertDataCast(tbActors.Text, actorsType, MovieId);
+                insertDataCast(tbActresses.Text, actressType, MovieId);
+                insertDataCast(tbDirector.Text, directorType, MovieId);
+                insertDataCast(tbWriter.Text, writerType, MovieId);
+                
                 MessageBox.Show("Успешна регистрација!");
+                
                 tbMovieTitle.Text = "";
                 tbActors.Text = "";
                 tbActresses.Text = "";
@@ -78,38 +86,28 @@ namespace Kino
                 tbGenre.Text = "";
                 tbWriter.Text = "";
                 tbYear.Text = "";
-                tbRating.Text = "";
-
+                //tbRating.Text = "";     
             }
-           
-
-           
         }
+
+        //vrati MovieId za dadeno MovieTitle
+        public int GetMovieId(String MovieTitle) {
+            string Query = "SELECT MOVIEID FROM MOVIES WHERE MOVIENAME = '" + MovieTitle + "'";
+            da.SelectCommand = new OracleCommand(Query, conn);
+            da.Fill(dtMovieId);
+            return Convert.ToInt16(dtMovieId.Rows[0][0]);
+        }
+
+        //vnesi podatoci za poceten rating vo bazata
         public void RateMovie(int rating)
-        {
-            //vnesi podatoci za rating vo bazata
-            string NewBookingQuery = "INSERT INTO RATINGS VALUES(" + rating.ToString() + ", " + MovieId.ToString() + ", SYSDATE)";
+        {     
+            string NewBookingQuery = "INSERT INTO RATINGS VALUES(5, " + MovieId.ToString() + ", SYSDATE)";
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
             cmd.CommandText = NewBookingQuery;
             int check = cmd.ExecuteNonQuery();
-
-            //iskluci gi site radio buttons za da ne moze da glasa povtorno
-            
         }
-        int nextId(string ID, string Table){
-            dt = new DataTable();
-            try
-            {
-                da.SelectCommand = new OracleCommand("SELECT MAX(" + ID + ") FROM " + Table, conn);
-                da.Fill(dt);
-            }
-            catch(OracleException ex) {
-                MessageBox.Show(ex.Message);
-            }
-            int nextId = Convert.ToInt16(dt.Rows[0][0]) + 1;
-            return nextId;
-        }
+       
         void insertInto(string Query) {
             OracleCommand cmd = new OracleCommand();
             cmd.Connection = conn;
@@ -125,11 +123,11 @@ namespace Kino
             // if (check == 0) MessageBox.Show("Nishtooo");
             // else MessageBox.Show("top!");
         }
+
         void insertDataCast(string Query, int typeId,int movieId) {
             string[] nameParts = Query.Split(',');
             foreach (string name in nameParts)
             {
-                int personId = nextId("PERSONID", "PERSONS");
                 string[] nameSurname = name.Trim().Split(new char[] {' '},2);
                 dt = new DataTable();
 
@@ -149,11 +147,8 @@ namespace Kino
                     label9.Text = dt.Rows[0][0].ToString();
                 }
                 
-                personId = Convert.ToInt16(dt.Rows[0][0]);
+                int personId = Convert.ToInt16(dt.Rows[0][0]);
                 insertInto("INSERT INTO ROLES VALUES(" + movieId + "," + typeId + "," + personId + ")");
-
-
-
             }
         }
 

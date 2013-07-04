@@ -32,7 +32,6 @@
             this.tbGenre = new System.Windows.Forms.TextBox();
             this.tbDuration = new System.Windows.Forms.TextBox();
             this.tbYear = new System.Windows.Forms.TextBox();
-            this.tbRating = new System.Windows.Forms.TextBox();
             this.tbActors = new System.Windows.Forms.TextBox();
             this.tbActresses = new System.Windows.Forms.TextBox();
             this.tbDirector = new System.Windows.Forms.TextBox();
@@ -40,7 +39,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -59,49 +57,42 @@
             // 
             // tbGenre
             // 
-            this.tbGenre.Location = new System.Drawing.Point(206, 120);
+            this.tbGenre.Location = new System.Drawing.Point(206, 127);
             this.tbGenre.Name = "tbGenre";
             this.tbGenre.Size = new System.Drawing.Size(130, 20);
             this.tbGenre.TabIndex = 1;
             // 
             // tbDuration
             // 
-            this.tbDuration.Location = new System.Drawing.Point(206, 156);
+            this.tbDuration.Location = new System.Drawing.Point(206, 167);
             this.tbDuration.Name = "tbDuration";
             this.tbDuration.Size = new System.Drawing.Size(130, 20);
             this.tbDuration.TabIndex = 2;
             // 
             // tbYear
             // 
-            this.tbYear.Location = new System.Drawing.Point(206, 192);
+            this.tbYear.Location = new System.Drawing.Point(206, 208);
             this.tbYear.Name = "tbYear";
             this.tbYear.Size = new System.Drawing.Size(130, 20);
             this.tbYear.TabIndex = 3;
             // 
-            // tbRating
-            // 
-            this.tbRating.Location = new System.Drawing.Point(206, 228);
-            this.tbRating.Name = "tbRating";
-            this.tbRating.Size = new System.Drawing.Size(130, 20);
-            this.tbRating.TabIndex = 4;
-            // 
             // tbActors
             // 
-            this.tbActors.Location = new System.Drawing.Point(206, 261);
+            this.tbActors.Location = new System.Drawing.Point(206, 249);
             this.tbActors.Name = "tbActors";
             this.tbActors.Size = new System.Drawing.Size(130, 20);
             this.tbActors.TabIndex = 5;
             // 
             // tbActresses
             // 
-            this.tbActresses.Location = new System.Drawing.Point(206, 296);
+            this.tbActresses.Location = new System.Drawing.Point(206, 289);
             this.tbActresses.Name = "tbActresses";
             this.tbActresses.Size = new System.Drawing.Size(130, 20);
             this.tbActresses.TabIndex = 6;
             // 
             // tbDirector
             // 
-            this.tbDirector.Location = new System.Drawing.Point(206, 334);
+            this.tbDirector.Location = new System.Drawing.Point(206, 329);
             this.tbDirector.Name = "tbDirector";
             this.tbDirector.Size = new System.Drawing.Size(130, 20);
             this.tbDirector.TabIndex = 7;
@@ -120,7 +111,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(104, 123);
+            this.label2.Location = new System.Drawing.Point(104, 130);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 15);
             this.label2.TabIndex = 9;
@@ -130,7 +121,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(104, 159);
+            this.label3.Location = new System.Drawing.Point(104, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 15);
             this.label3.TabIndex = 10;
@@ -140,27 +131,17 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(104, 195);
+            this.label4.Location = new System.Drawing.Point(104, 211);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(40, 15);
             this.label4.TabIndex = 11;
             this.label4.Text = "Year:";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(104, 231);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 15);
-            this.label5.TabIndex = 12;
-            this.label5.Text = "Rating:";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(104, 264);
+            this.label6.Location = new System.Drawing.Point(104, 252);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 15);
             this.label6.TabIndex = 13;
@@ -170,7 +151,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(104, 299);
+            this.label7.Location = new System.Drawing.Point(104, 292);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 15);
             this.label7.TabIndex = 14;
@@ -180,7 +161,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(104, 337);
+            this.label8.Location = new System.Drawing.Point(104, 332);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(62, 15);
             this.label8.TabIndex = 15;
@@ -242,7 +223,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -250,7 +230,6 @@
             this.Controls.Add(this.tbDirector);
             this.Controls.Add(this.tbActresses);
             this.Controls.Add(this.tbActors);
-            this.Controls.Add(this.tbRating);
             this.Controls.Add(this.tbYear);
             this.Controls.Add(this.tbDuration);
             this.Controls.Add(this.tbGenre);
@@ -269,7 +248,6 @@
         private System.Windows.Forms.TextBox tbGenre;
         private System.Windows.Forms.TextBox tbDuration;
         private System.Windows.Forms.TextBox tbYear;
-        private System.Windows.Forms.TextBox tbRating;
         private System.Windows.Forms.TextBox tbActors;
         private System.Windows.Forms.TextBox tbActresses;
         private System.Windows.Forms.TextBox tbDirector;
@@ -277,7 +255,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

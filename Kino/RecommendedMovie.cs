@@ -47,7 +47,10 @@ namespace Kino
 
             Mng = new System.Resources.ResourceManager("Kino.Properties.Resources", typeof(Properties.Resources).Assembly);
 
-            MovieName = GetRecommendedMovieId();
+            if (CustomerId != -1)
+                MovieName = GetRecommendedMovieId();
+            else
+                MovieName = GetBestRatingAtAll();
         }
 
         public void Draw() {
@@ -137,11 +140,12 @@ GROUP BY MOVIEID)))";
 
             if (dt.Rows.Count > 0) //ako korisnikot e najaven i postoi takov film
                 return dt.Rows[0][0].ToString().Trim();
-            else // ako ne e najaven ili nema takov film, prikazi mu go onoj so najvisok rejting voopsto, sto go nema gledano
-                return GetBestRatingMovieName();
+            else // ako gi gledal site od toj zanr, prikazi mu go onoj so najvisok rejting voopsto, sto go nema gledano
+                return GetBestRatingMovieForCustomer();
         }
 
-        public string GetBestRatingMovieName() {
+        //ako customer gi gledal site od negoviot omilen zanr, prikazi mu go onoj so najvisok rejting voopsto, sto go nema gledano 
+        public string GetBestRatingMovieForCustomer() {
             string Query = @"SELECT MOVIENAME FROM MOVIES WHERE MOVIEID =
 (SELECT MOVIEID 
 FROM (SELECT MOVIEID FROM MOVIES WHERE MOVIEID NOT IN (SELECT DISTINCT M.MOVIEID
@@ -163,6 +167,24 @@ FROM MOVIES M, SHOWS S, TICKETS T, BOOKINGS B, CUSTOMERS C
 WHERE M.MOVIEID = S.MOVIEID AND T.SHOWID = S.SHOWID AND T.BOOKINGID = B.BOOKINGID AND B.CUSTOMERID = C.CUSTOMERID AND C.CUSTOMERID = " + CustomerId.ToString() + @"))
 GROUP BY MOVIEID))))";
 
+            da.SelectCommand = new OracleCommand(Query, conn);
+            dt.Dispose();
+            dt = new DataTable();
+            da.Fill(dt);
+            return dt.Rows[0][0].ToString().Trim();
+        }
+
+        //ako ne e najaven, vrati mu go onoj film so najvisok rejting voopsto
+        public string GetBestRatingAtAll() {
+            string Query = @"SELECT MOVIENAME FROM MOVIES WHERE MOVIEID = (SELECT MOVIEID 
+FROM (SELECT MOVIEID, AVG(RATING) RATING
+FROM RATINGS
+GROUP BY MOVIEID) A
+WHERE A.RATING = (SELECT MAX(RATING)
+FROM (SELECT MOVIEID, AVG(RATING) RATING
+FROM RATINGS
+GROUP BY MOVIEID)
+))";
             da.SelectCommand = new OracleCommand(Query, conn);
             dt.Dispose();
             dt = new DataTable();
