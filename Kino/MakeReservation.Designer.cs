@@ -101,23 +101,28 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbSeats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // tbNumberSeats
             // 
-            this.tbNumberSeats.Location = new System.Drawing.Point(154, 26);
+            this.tbNumberSeats.Location = new System.Drawing.Point(209, 27);
             this.tbNumberSeats.Name = "tbNumberSeats";
             this.tbNumberSeats.Size = new System.Drawing.Size(38, 20);
             this.tbNumberSeats.TabIndex = 46;
             this.tbNumberSeats.Text = "1";
+            this.tbNumberSeats.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbNumberSeats.TextChanged += new System.EventHandler(this.tbNumberSeats_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 27);
+            this.label1.Location = new System.Drawing.Point(107, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(104, 16);
             this.label1.TabIndex = 45;
@@ -125,17 +130,18 @@
             // 
             // tbTotalPrice
             // 
-            this.tbTotalPrice.Location = new System.Drawing.Point(313, 26);
+            this.tbTotalPrice.Location = new System.Drawing.Point(368, 27);
             this.tbTotalPrice.Name = "tbTotalPrice";
             this.tbTotalPrice.ReadOnly = true;
             this.tbTotalPrice.Size = new System.Drawing.Size(38, 20);
             this.tbTotalPrice.TabIndex = 50;
+            this.tbTotalPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(244, 27);
+            this.label3.Location = new System.Drawing.Point(299, 28);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 49;
@@ -143,7 +149,7 @@
             // 
             // btnContinue
             // 
-            this.btnContinue.Location = new System.Drawing.Point(46, 530);
+            this.btnContinue.Location = new System.Drawing.Point(101, 524);
             this.btnContinue.Name = "btnContinue";
             this.btnContinue.Size = new System.Drawing.Size(207, 23);
             this.btnContinue.TabIndex = 51;
@@ -153,6 +159,7 @@
             // 
             // gbSeats
             // 
+            this.gbSeats.BackColor = System.Drawing.SystemColors.Menu;
             this.gbSeats.Controls.Add(this.J6);
             this.gbSeats.Controls.Add(this.J5);
             this.gbSeats.Controls.Add(this.J4);
@@ -213,7 +220,7 @@
             this.gbSeats.Controls.Add(this.G3);
             this.gbSeats.Controls.Add(this.G2);
             this.gbSeats.Controls.Add(this.G1);
-            this.gbSeats.Location = new System.Drawing.Point(46, 104);
+            this.gbSeats.Location = new System.Drawing.Point(101, 105);
             this.gbSeats.Name = "gbSeats";
             this.gbSeats.Size = new System.Drawing.Size(431, 398);
             this.gbSeats.TabIndex = 52;
@@ -1002,7 +1009,7 @@
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(259, 530);
+            this.btnCancel.Location = new System.Drawing.Point(314, 524);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(218, 23);
             this.btnCancel.TabIndex = 53;
@@ -1015,7 +1022,7 @@
             this.button1.BackColor = System.Drawing.Color.CornflowerBlue;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(70, 65);
+            this.button1.Location = new System.Drawing.Point(125, 66);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(20, 22);
             this.button1.TabIndex = 60;
@@ -1025,7 +1032,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 70);
+            this.label2.Location = new System.Drawing.Point(146, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(55, 16);
             this.label2.TabIndex = 61;
@@ -1036,7 +1043,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(234, 70);
+            this.label4.Location = new System.Drawing.Point(289, 71);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 63;
@@ -1047,7 +1054,7 @@
             this.button2.BackColor = System.Drawing.Color.OrangeRed;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(212, 65);
+            this.button2.Location = new System.Drawing.Point(267, 66);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(21, 22);
             this.button2.TabIndex = 62;
@@ -1057,7 +1064,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(404, 70);
+            this.label5.Location = new System.Drawing.Point(459, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(54, 16);
             this.label5.TabIndex = 65;
@@ -1068,17 +1075,40 @@
             this.button3.BackColor = System.Drawing.Color.LightGreen;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button3.Location = new System.Drawing.Point(383, 65);
+            this.button3.Location = new System.Drawing.Point(438, 66);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(19, 22);
             this.button3.TabIndex = 64;
             this.button3.UseVisualStyleBackColor = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Kino.Properties.Resources.tape_vertical;
+            this.pictureBox1.Location = new System.Drawing.Point(557, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(79, 571);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 66;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Kino.Properties.Resources.tape_vertical;
+            this.pictureBox2.Location = new System.Drawing.Point(-1, -5);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(79, 571);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 67;
+            this.pictureBox2.TabStop = false;
+            // 
             // MakeReservation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 577);
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.ClientSize = new System.Drawing.Size(635, 565);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label4);
@@ -1098,6 +1128,8 @@
             this.Text = "MakeReservation";
             this.Load += new System.EventHandler(this.MakeReservation_Load);
             this.gbSeats.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1178,5 +1210,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

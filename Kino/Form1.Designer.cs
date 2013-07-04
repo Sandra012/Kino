@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.btnRepertoar = new System.Windows.Forms.Button();
-            this.btnMovies = new System.Windows.Forms.Button();
             this.btnLogIn = new System.Windows.Forms.Button();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.tbUsername = new System.Windows.Forms.TextBox();
@@ -45,26 +44,13 @@
             this.btnRepertoar.BackColor = System.Drawing.Color.Tan;
             this.btnRepertoar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRepertoar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnRepertoar.Location = new System.Drawing.Point(278, 106);
+            this.btnRepertoar.Location = new System.Drawing.Point(269, 84);
             this.btnRepertoar.Name = "btnRepertoar";
             this.btnRepertoar.Size = new System.Drawing.Size(146, 32);
             this.btnRepertoar.TabIndex = 1;
             this.btnRepertoar.Text = "Movie schedule";
             this.btnRepertoar.UseVisualStyleBackColor = false;
             this.btnRepertoar.Click += new System.EventHandler(this.btnRepertoar_Click_1);
-            // 
-            // btnMovies
-            // 
-            this.btnMovies.BackColor = System.Drawing.Color.Tan;
-            this.btnMovies.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMovies.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.btnMovies.Location = new System.Drawing.Point(278, 261);
-            this.btnMovies.Name = "btnMovies";
-            this.btnMovies.Size = new System.Drawing.Size(146, 49);
-            this.btnMovies.TabIndex = 3;
-            this.btnMovies.Text = "All movies";
-            this.btnMovies.UseVisualStyleBackColor = false;
-            this.btnMovies.Click += new System.EventHandler(this.btnMovies_Click);
             // 
             // btnLogIn
             // 
@@ -161,7 +147,6 @@
             this.Controls.Add(this.tbUsername);
             this.Controls.Add(this.btnSignUp);
             this.Controls.Add(this.btnLogIn);
-            this.Controls.Add(this.btnMovies);
             this.Controls.Add(this.btnRepertoar);
             this.DoubleBuffered = true;
             this.Location = new System.Drawing.Point(50, 50);
@@ -177,7 +162,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnRepertoar;
-        private System.Windows.Forms.Button btnMovies;
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.TextBox tbUsername;

@@ -52,15 +52,17 @@
             // panel1
             // 
             this.panel1.AutoScroll = true;
-            this.panel1.Location = new System.Drawing.Point(41, 93);
+            this.panel1.BackColor = System.Drawing.Color.Honeydew;
+            this.panel1.Location = new System.Drawing.Point(41, 68);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(617, 517);
+            this.panel1.Size = new System.Drawing.Size(617, 542);
             this.panel1.TabIndex = 1;
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
             this.panel1.MouseHover += new System.EventHandler(this.panel1_MouseHover);
             // 
             // panelReccomend
             // 
+            this.panelReccomend.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panelReccomend.Location = new System.Drawing.Point(665, 261);
             this.panelReccomend.Name = "panelReccomend";
             this.panelReccomend.Size = new System.Drawing.Size(176, 199);
@@ -68,7 +70,7 @@
             // 
             // tbMovieName
             // 
-            this.tbMovieName.BackColor = System.Drawing.Color.Bisque;
+            this.tbMovieName.BackColor = System.Drawing.Color.Honeydew;
             this.tbMovieName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbMovieName.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.tbMovieName.Location = new System.Drawing.Point(666, 484);
@@ -82,6 +84,7 @@
             // 
             this.lblRecommended.AutoSize = true;
             this.lblRecommended.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRecommended.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblRecommended.Location = new System.Drawing.Point(662, 236);
             this.lblRecommended.Name = "lblRecommended";
             this.lblRecommended.Size = new System.Drawing.Size(137, 13);
@@ -91,6 +94,7 @@
             // lblLoggedIn
             // 
             this.lblLoggedIn.AutoSize = true;
+            this.lblLoggedIn.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblLoggedIn.Location = new System.Drawing.Point(627, 26);
             this.lblLoggedIn.Name = "lblLoggedIn";
             this.lblLoggedIn.Size = new System.Drawing.Size(63, 13);
@@ -112,6 +116,7 @@
             // 
             this.lblLogout.AutoSize = true;
             this.lblLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLogout.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lblLogout.Location = new System.Drawing.Point(627, 42);
             this.lblLogout.Name = "lblLogout";
             this.lblLogout.Size = new System.Drawing.Size(40, 13);
@@ -124,6 +129,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Location = new System.Drawing.Point(38, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(33, 13);
@@ -132,6 +139,7 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox1.Image = global::Kino.Properties.Resources.movieClapper1;
             this.pictureBox1.Location = new System.Drawing.Point(666, 93);
             this.pictureBox1.Name = "pictureBox1";
@@ -146,6 +154,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(847, 621);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label1);
@@ -157,6 +166,7 @@
             this.Controls.Add(this.panelReccomend);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dateTimePicker1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Location = new System.Drawing.Point(50, 50);
             this.Name = "MovieProgramme";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

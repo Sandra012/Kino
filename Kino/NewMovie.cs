@@ -86,7 +86,8 @@ namespace Kino
                 tbGenre.Text = "";
                 tbWriter.Text = "";
                 tbYear.Text = "";
-                //tbRating.Text = "";     
+
+                RateMovie();
             }
         }
 
@@ -99,7 +100,7 @@ namespace Kino
         }
 
         //vnesi podatoci za poceten rating vo bazata
-        public void RateMovie(int rating)
+        public void RateMovie()
         {     
             string NewBookingQuery = "INSERT INTO RATINGS VALUES(5, " + MovieId.ToString() + ", SYSDATE)";
             OracleCommand cmd = new OracleCommand();

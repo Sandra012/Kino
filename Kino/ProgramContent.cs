@@ -55,7 +55,7 @@ namespace Kino
 
         public void Draw(Panel panel)
         {
-            int distance = 0; //rastojanie od gornata granica na panelot
+            int distance = 10; //rastojanie od gornata granica na panelot
             foreach (ProgramItem Item in Items)
             {
                 Item.Draw(panel, distance);

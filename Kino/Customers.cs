@@ -87,11 +87,17 @@ WHERE A.SUM > (SELECT AVG(TOTALPRICE) FROM BOOKINGS))";
         private void rbAll_MouseClick(object sender, MouseEventArgs e)
         {
             ShowAll();
+            rbFirstName.Enabled = true;
+            rbLastName.Enabled = true;
+            rbID.Enabled = true;
         }
 
         private void rbOverAverage_MouseClick(object sender, MouseEventArgs e)
         {
             ShowOverAverage();
+            rbFirstName.Enabled = true;
+            rbLastName.Enabled = true;
+            rbID.Enabled = true;
         }
 
         private void rbFirstName_Click(object sender, EventArgs e)
@@ -153,6 +159,9 @@ ORDER BY C.CUSTOMERID";
                 MessageBox.Show(ex.Message);
             }
             dgwCustomers.DataSource = dtFavouriteActors;
+            rbFirstName.Enabled = false;
+            rbLastName.Enabled = false;
+            rbID.Enabled = false;
         }
 
         private void dgwCustomers_CellContentClick(object sender, DataGridViewCellEventArgs e)

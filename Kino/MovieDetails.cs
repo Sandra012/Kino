@@ -128,7 +128,10 @@ namespace Kino
             dtRating.Dispose();
             dtRating = new DataTable();
             da.Fill(dtRating);
-            return Convert.ToDecimal(dtRating.Rows[0][0].ToString().Trim());
+            if (dtRating.Rows.Count > 0)
+                return Convert.ToDecimal(dtRating.Rows[0][0].ToString().Trim());
+            else
+                return 5;
         }
 
         public void RateMovie(int rating) {
